@@ -1,0 +1,96 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class nyaBehaviourScript : MonoBehaviour {
+
+    private Animator anim;
+    private CharacterController charcon;
+    public float charSpeed = 10.0f;
+    public float turnSpeed = 100.0f;
+    private Vector3 moveDirection = Vector3.zero;
+    public float gravity = 50.0f;
+    public float jumpForce = 15.0f;
+    private float oldY = 0.0f;
+	private float currentRot= 270.0f;
+	private float oldRot= 0.0f;
+    private int jumpStep = 2;
+    private bool isJumping = false;
+
+    // Use this for initialization
+    void Start () {
+        anim = gameObject.GetComponentInChildren<Animator>();
+        charcon = GetComponent<CharacterController>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        //translate control
+        float angle = Mathf.Ceil(((Mathf.Atan2(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"))) * Mathf.Rad2Deg) + 270.0f);
+        if (Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("w") || Input.GetKey("d"))
+        {
+            anim.SetInteger("aniparam", 1);
+            if (angle != currentRot)
+            {
+                currentRot = angle;
+            }
+            if (oldRot != currentRot)
+            {
+                currentRot = angle;
+                transform.Rotate(0, oldRot - currentRot, 0);
+            }
+            oldRot = currentRot;
+
+
+            if (charcon.isGrounded)
+            {
+                moveDirection = transform.forward * charSpeed;
+            }
+            if (!charcon.isGrounded)
+            {
+                moveDirection.x = transform.forward.x * charSpeed * 0.5f;
+                moveDirection.z = transform.forward.z * charSpeed * 0.5f;
+            }
+        }
+        else
+        {
+            anim.SetInteger("aniparam", 0);
+            moveDirection.x = 0;
+            moveDirection.z = 0;
+        }
+
+        //jump control
+        if (charcon.isGrounded)
+        {
+            jumpStep = 2;
+        }
+
+        if (Input.GetKeyDown("space") && jumpStep > 0)
+        {  //
+            jumpStep -= 1;
+            moveDirection.y = jumpForce;
+            anim.SetInteger("jumpAni", 1);
+        }
+        else if (Time.deltaTime - charcon.transform.position.y >= oldY)
+        { //
+            anim.SetInteger("jumpAni", 0);
+        }
+
+        oldY = Time.deltaTime - charcon.transform.position.y;
+        //Debug.Log(oldRot + " " + transform.eulerAngles.y + " " + angle);
+
+
+        charcon.Move(moveDirection * Time.deltaTime);
+        moveDirection.y -= gravity * Time.deltaTime;
+
+    }
+}
+
+
+// moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            // moveDirection = transform.TransformDirection(moveDirection);
+            // moveDirection *= charSpeed;
+
+			//  transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
