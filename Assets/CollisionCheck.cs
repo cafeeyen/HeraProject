@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CollisionCheck : MonoBehaviour {
 
-    public DieAndRespawn dieAndRespawn = new DieAndRespawn();
+    private DieAndRespawn dieAndRespawn;
 
 
     // Use this for initialization
     void Start () {
-		
+		dieAndRespawn = gameObject.GetComponent<DieAndRespawn>();
 	}
 	
 	// Update is called once per frame
@@ -25,7 +25,7 @@ public class CollisionCheck : MonoBehaviour {
         if (col.gameObject.tag == "Water")
         {
             Debug.Log("Collide");
-            Destroy(col.gameObject);
+            //Destroy(col.gameObject);
             dieAndRespawn.OnDied();
         }
     }

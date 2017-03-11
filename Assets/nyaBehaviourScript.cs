@@ -5,7 +5,7 @@ using UnityEngine;
 public class nyaBehaviourScript : MonoBehaviour {
 
     private Animator anim;
-    private CharacterController charcon;
+    public CharacterController characterController;
     public float charSpeed = 10.0f;
     public float turnSpeed = 100.0f;
     private Vector3 moveDirection = Vector3.zero;
@@ -15,12 +15,11 @@ public class nyaBehaviourScript : MonoBehaviour {
 	private float currentRot= 270.0f;
 	private float oldRot= 0.0f;
     private int jumpStep = 2;
-    private bool isJumping = false;
 
     // Use this for initialization
     void Start () {
         anim = gameObject.GetComponentInChildren<Animator>();
-        charcon = GetComponent<CharacterController>();
+        characterController = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -44,11 +43,11 @@ public class nyaBehaviourScript : MonoBehaviour {
             oldRot = currentRot;
 
 
-            if (charcon.isGrounded)
+            if (characterController.isGrounded)
             {
                 moveDirection = transform.forward * charSpeed;
             }
-            if (!charcon.isGrounded)
+            if (!characterController.isGrounded)
             {
                 moveDirection.x = transform.forward.x * charSpeed * 0.5f;
                 moveDirection.z = transform.forward.z * charSpeed * 0.5f;
@@ -62,7 +61,7 @@ public class nyaBehaviourScript : MonoBehaviour {
         }
 
         //jump control
-        if (charcon.isGrounded)
+        if (characterController.isGrounded)
         {
             jumpStep = 2;
         }
@@ -73,16 +72,16 @@ public class nyaBehaviourScript : MonoBehaviour {
             moveDirection.y = jumpForce;
             anim.SetInteger("jumpAni", 1);
         }
-        else if (Time.deltaTime - charcon.transform.position.y >= oldY)
+        else if (Time.deltaTime - characterController.transform.position.y >= oldY)
         { //
             anim.SetInteger("jumpAni", 0);
         }
 
-        oldY = Time.deltaTime - charcon.transform.position.y;
+        oldY = Time.deltaTime - characterController.transform.position.y;
         //Debug.Log(oldRot + " " + transform.eulerAngles.y + " " + angle);
 
 
-        charcon.Move(moveDirection * Time.deltaTime);
+        characterController.Move(moveDirection * Time.deltaTime);
         moveDirection.y -= gravity * Time.deltaTime;
 
     }
