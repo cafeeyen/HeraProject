@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MinimapCamera : MonoBehaviour {
 
-	private float MINIMAP_YZOOM = 80;
+	private float MINIMAP_YZOOM = 150;
 	private float MINIMAP_ZFRONT = 1;
 	public Transform playerController;
     private Vector3 offset;
