@@ -46,9 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraScript.cs" />
      <Compile Include="Assets\CollisionCheck.cs" />
      <Compile Include="Assets\DieAndRespawn.cs" />
+     <Compile Include="Assets\MainCameraScript.cs" />
+     <Compile Include="Assets\MinimapCamera.cs" />
      <Compile Include="Assets\nyaBehaviourScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
