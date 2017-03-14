@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D9BC7A4A-8657-A796-E5FF-EE5D9D374786}</ProjectGuid>
+    <ProjectGuid>{BD05E3F9-3022-EA45-2FF9-30C2DEC690AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraScript.cs" />
      <Compile Include="Assets\CollisionCheck.cs" />
      <Compile Include="Assets\DieAndRespawn.cs" />
      <Compile Include="Assets\MainCameraScript.cs" />
