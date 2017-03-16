@@ -85,7 +85,9 @@
     <Compile Include="Assets\Script\CollisionCheck.cs" />
     <Compile Include="Assets\Script\DieAndRespawn.cs" />
     <Compile Include="Assets\Script\MainCameraScript.cs" />
+    <Compile Include="Assets\Script\Map03_Camera.cs" />
     <Compile Include="Assets\Script\MinimapCamera.cs" />
+    <Compile Include="Assets\Script\NewcharacterBehaviourScript.cs" />
     <Compile Include="Assets\Script\nyaBehaviourScript.cs" />
   </ItemGroup>
   <ItemGroup>

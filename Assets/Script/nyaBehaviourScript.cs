@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class nyaBehaviourScript : MonoBehaviour {
+public class nyaBehaviourScript : MonoBehaviour
+{
 
     private Animator anim;
     public CharacterController characterController;
@@ -12,12 +13,13 @@ public class nyaBehaviourScript : MonoBehaviour {
     public float gravity = 50.0f;
     public float jumpForce = 15.0f;
     private float oldY = 0.0f;
-	private float currentRot= 270.0f;
-	private float oldRot= 0.0f;
+    private float currentRot = 270.0f;
+    private float oldRot = 0.0f;
     private int jumpStep = 2;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         anim = gameObject.GetComponentInChildren<Animator>();
         characterController = GetComponent<CharacterController>();
     }
@@ -89,7 +91,7 @@ public class nyaBehaviourScript : MonoBehaviour {
 
 
 // moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            // moveDirection = transform.TransformDirection(moveDirection);
-            // moveDirection *= charSpeed;
+// moveDirection = transform.TransformDirection(moveDirection);
+// moveDirection *= charSpeed;
 
-			//  transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+//  transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
