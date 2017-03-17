@@ -11,7 +11,7 @@ public class MainCameraScript : MonoBehaviour {
     
     void Start () 
     {
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + Y_CAMERA, player.transform.position.z + Z_CAMERA);
+        transform.position = new Vector3(player.transform.position.x + X_CAMERA, player.transform.position.y + Y_CAMERA, player.transform.position.z + Z_CAMERA);
         offset = transform.position - player.transform.position;
     }
     

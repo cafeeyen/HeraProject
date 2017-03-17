@@ -32,7 +32,6 @@ public class Map03_Camera : MonoBehaviour
 
             offset.x = X_CAMERA + (0 - angle_y) / (90f / 60f);
             offset.z = Z_CAMERA + (0 - angle_y) / (90f / 40f);
-            Debug.Log(offset);
         }
         transform.position = player.transform.position + offset;
     }
