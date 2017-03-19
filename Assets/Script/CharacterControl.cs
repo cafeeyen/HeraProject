@@ -26,15 +26,15 @@ public class CharacterControl: MonoBehaviour
     void Update()
     {
         // Face direction
-        if (Input.GetKey("w") && Input.GetKey("a")) getRotation(new Vector3(-1f, 0f, 1f));
-        else if (Input.GetKey("w") && Input.GetKey("d")) getRotation(new Vector3(1f, 0f, 1f));
-        else if (Input.GetKey("s") && Input.GetKey("a")) getRotation(new Vector3(-1f, 0f, -1f));
-        else if (Input.GetKey("s") && Input.GetKey("d")) getRotation(new Vector3(1f, 0f, -1f));
+        if (Input.GetKey("up") && Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, 1f));
+        else if (Input.GetKey("up") && Input.GetKey("right")) getRotation(new Vector3(1f, 0f, 1f));
+        else if (Input.GetKey("down") && Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, -1f));
+        else if (Input.GetKey("down") && Input.GetKey("right")) getRotation(new Vector3(1f, 0f, -1f));
 
-        else if (Input.GetKey("s")) getRotation(new Vector3(0f, 0f, -1f));
-        else if (Input.GetKey("w")) getRotation(new Vector3(0f, 0f, 1f));
-        else if (Input.GetKey("a")) getRotation(new Vector3(-1f, 0f, 0f));
-        else if (Input.GetKey("d")) getRotation(new Vector3(1f, 0f, 0f));
+        else if (Input.GetKey("up")) getRotation(new Vector3(0f, 0f, 1f));
+        else if (Input.GetKey("down")) getRotation(new Vector3(0f, 0f, -1f));
+        else if (Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, 0f));
+        else if (Input.GetKey("right")) getRotation(new Vector3(1f, 0f, 0f));
 
         if (!characterController.isGrounded)
         {
@@ -57,7 +57,7 @@ public class CharacterControl: MonoBehaviour
         }
 
         // Animation and Jump direction
-        if (Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("w") || Input.GetKey("d"))
+        if (Input.GetKey("up") || Input.GetKey("down") || Input.GetKey("left") || Input.GetKey("right"))
             anim.SetInteger("aniparam", 1);
         else
         {
