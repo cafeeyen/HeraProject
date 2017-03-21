@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{68D891A9-9FE0-D1D9-FA5B-0F7390ED31EC}</ProjectGuid>
+    <ProjectGuid>{156C732B-E1C9-624D-3D4F-F4C6964B1836}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,14 +47,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\CameraScript.cs" />
+     <Compile Include="Assets\Script\CharacterControl.cs" />
      <Compile Include="Assets\Script\CollisionCheck.cs" />
+     <Compile Include="Assets\Script\CyclopAIControl.cs" />
      <Compile Include="Assets\Script\DieAndRespawn.cs" />
      <Compile Include="Assets\Script\Item01.cs" />
      <Compile Include="Assets\Script\Items.cs" />
      <Compile Include="Assets\Script\MainCameraScript.cs" />
      <Compile Include="Assets\Script\Map03_Camera.cs" />
      <Compile Include="Assets\Script\MinimapCamera.cs" />
-     <Compile Include="Assets\Script\NewcharacterBehaviourScript.cs" />
      <Compile Include="Assets\Script\PlayerInventory.cs" />
      <Compile Include="Assets\Script\nyaBehaviourScript.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
@@ -82,7 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{828CE99F-FA63-B9F6-3280-AC07F0BFB3B2}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{1B798A6B-DAAE-0B93-8F04-C04B33B14537}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
