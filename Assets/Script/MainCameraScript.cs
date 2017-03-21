@@ -6,7 +6,7 @@ public class MainCameraScript : MonoBehaviour {
 
 	public GameObject player;
     private Vector3 offset;
-    private float X_CAMERA = 0, Y_CAMERA = 40, Z_CAMERA = -40;
+    private float X_CAMERA = 0, Y_CAMERA = 60, Z_CAMERA = -60;
 
     
     void Start () 
