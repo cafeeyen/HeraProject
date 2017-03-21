@@ -84,6 +84,7 @@
     <Compile Include="Assets\Script\CameraScript.cs" />
     <Compile Include="Assets\Script\CharacterControl.cs" />
     <Compile Include="Assets\Script\CollisionCheck.cs" />
+    <Compile Include="Assets\Script\CyclopAIControl.cs" />
     <Compile Include="Assets\Script\DieAndRespawn.cs" />
     <Compile Include="Assets\Script\Item01.cs" />
     <Compile Include="Assets\Script\Items.cs" />
