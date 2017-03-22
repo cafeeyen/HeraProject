@@ -89,7 +89,8 @@ public class CyclopAIControl : MonoBehaviour {
 			
 			
 		}
-		else{
+		else
+        {
 			animator.SetInteger("attacking", 0);
 			currentSpeed = moveSpeed;
 		}
