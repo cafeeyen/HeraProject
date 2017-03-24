@@ -81,22 +81,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\CameraScript.cs" />
-    <Compile Include="Assets\Script\CharacterControl.cs" />
-    <Compile Include="Assets\Script\CollisionCheck.cs" />
-    <Compile Include="Assets\Script\CyclopAIControl.cs" />
-    <Compile Include="Assets\Script\DieAndRespawn.cs" />
-    <Compile Include="Assets\Script\Item01.cs" />
-    <Compile Include="Assets\Script\Items.cs" />
-    <Compile Include="Assets\Script\MainCameraScript.cs" />
-    <Compile Include="Assets\Script\Map03_Camera.cs" />
-    <Compile Include="Assets\Script\Map05_Camera.cs" />
-    <Compile Include="Assets\Script\MinimapCamera.cs" />
-    <Compile Include="Assets\Script\PlayerInventory.cs" />
-    <Compile Include="Assets\Script\nyaBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\CameraScript.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl.cs" />
+    <Compile Include="Assets\Scripts\CollisionCheck.cs" />
+    <Compile Include="Assets\Scripts\CyclopAIControl.cs" />
+    <Compile Include="Assets\Scripts\DieAndRespawn.cs" />
+    <Compile Include="Assets\Scripts\Item01.cs" />
+    <Compile Include="Assets\Scripts\Items.cs" />
+    <Compile Include="Assets\Scripts\MainCameraScript.cs" />
+    <Compile Include="Assets\Scripts\Map03_Camera.cs" />
+    <Compile Include="Assets\Scripts\Map05_Camera.cs" />
+    <Compile Include="Assets\Scripts\MinimapCamera.cs" />
+    <Compile Include="Assets\Scripts\PlayerInventory.cs" />
+    <Compile Include="Assets\Scripts\nyaBehaviourScript.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Shader\WaterRipple.shader" />
+    <None Include="Assets\Shaders\WaterRipple.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
