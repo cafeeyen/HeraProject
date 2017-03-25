@@ -1,0 +1,703 @@
+fileFormatVersion: 2
+guid: 9e9b3f7abc8384c4e870cc06cf42848a
+timeCreated: 1490289374
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: _Head
+    100002: Armature
+    100004: Body
+    100006: Bone
+    100008: Bone.001
+    100010: Bone.002
+    100012: Bone.002_end
+    100014: Bone.003
+    100016: Bone.004
+    100018: Bone.005
+    100020: Bone.006
+    100022: Bone.007
+    100024: Bone.007_end
+    100026: Bone.008
+    100028: Bone.008_end
+    100030: Bone.009
+    100032: Bone.009_end
+    100034: Bone.010
+    100036: Bone.011
+    100038: Bone.012
+    100040: Bone.012_end
+    100042: Bone.013
+    100044: Bone.013_end
+    100046: //RootNode
+    100048: Lleg
+    100050: Rleg
+    400000: _Head
+    400002: Armature
+    400004: Body
+    400006: Bone
+    400008: Bone.001
+    400010: Bone.002
+    400012: Bone.002_end
+    400014: Bone.003
+    400016: Bone.004
+    400018: Bone.005
+    400020: Bone.006
+    400022: Bone.007
+    400024: Bone.007_end
+    400026: Bone.008
+    400028: Bone.008_end
+    400030: Bone.009
+    400032: Bone.009_end
+    400034: Bone.010
+    400036: Bone.011
+    400038: Bone.012
+    400040: Bone.012_end
+    400042: Bone.013
+    400044: Bone.013_end
+    400046: //RootNode
+    400048: Lleg
+    400050: Rleg
+    4300000: Rleg
+    4300002: Body
+    4300004: _Head
+    4300006: Lleg
+    7400000: Armature|harpy_attack1
+    7400002: Armature|harpy_attack2
+    7400004: Armature|harpy_fly
+    7400006: Armature|harpy_flyAttack
+    7400008: Armature|harpy_flyAttack.001
+    7400010: Armature|harpy_dive
+    7400012: Armature|harpy_flyHover
+    9500000: //RootNode
+    13700000: _Head
+    13700002: Body
+    13700004: Lleg
+    13700006: Rleg
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|harpy_attack1
+      takeName: Armature|harpy_attack1
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _Head
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone.009
+        weight: 1
+      - path: Armature/Bone/Bone.009/Bone.009_end
+        weight: 1
+      - path: Armature/Bone.001
+        weight: 1
+      - path: Armature/Bone.001/Bone.002
+        weight: 1
+      - path: Armature/Bone.001/Bone.002/Bone.002_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.003
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007/Bone.007_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.004
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008/Bone.008_end
+        weight: 1
+      - path: Armature/Bone.010
+        weight: 1
+      - path: Armature/Bone.010/Bone.012
+        weight: 1
+      - path: Armature/Bone.010/Bone.012/Bone.012_end
+        weight: 1
+      - path: Armature/Bone.011
+        weight: 1
+      - path: Armature/Bone.011/Bone.013
+        weight: 1
+      - path: Armature/Bone.011/Bone.013/Bone.013_end
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Lleg
+        weight: 1
+      - path: Rleg
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|harpy_attack2
+      takeName: Armature|harpy_attack2
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _Head
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone.009
+        weight: 1
+      - path: Armature/Bone/Bone.009/Bone.009_end
+        weight: 1
+      - path: Armature/Bone.001
+        weight: 1
+      - path: Armature/Bone.001/Bone.002
+        weight: 1
+      - path: Armature/Bone.001/Bone.002/Bone.002_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.003
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007/Bone.007_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.004
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008/Bone.008_end
+        weight: 1
+      - path: Armature/Bone.010
+        weight: 1
+      - path: Armature/Bone.010/Bone.012
+        weight: 1
+      - path: Armature/Bone.010/Bone.012/Bone.012_end
+        weight: 1
+      - path: Armature/Bone.011
+        weight: 1
+      - path: Armature/Bone.011/Bone.013
+        weight: 1
+      - path: Armature/Bone.011/Bone.013/Bone.013_end
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Lleg
+        weight: 1
+      - path: Rleg
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|harpy_fly
+      takeName: Armature|harpy_fly
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _Head
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone.009
+        weight: 1
+      - path: Armature/Bone/Bone.009/Bone.009_end
+        weight: 1
+      - path: Armature/Bone.001
+        weight: 1
+      - path: Armature/Bone.001/Bone.002
+        weight: 1
+      - path: Armature/Bone.001/Bone.002/Bone.002_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.003
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007/Bone.007_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.004
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008/Bone.008_end
+        weight: 1
+      - path: Armature/Bone.010
+        weight: 1
+      - path: Armature/Bone.010/Bone.012
+        weight: 1
+      - path: Armature/Bone.010/Bone.012/Bone.012_end
+        weight: 1
+      - path: Armature/Bone.011
+        weight: 1
+      - path: Armature/Bone.011/Bone.013
+        weight: 1
+      - path: Armature/Bone.011/Bone.013/Bone.013_end
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Lleg
+        weight: 1
+      - path: Rleg
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|harpy_flyAttack
+      takeName: Armature|harpy_flyAttack
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _Head
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone.009
+        weight: 1
+      - path: Armature/Bone/Bone.009/Bone.009_end
+        weight: 1
+      - path: Armature/Bone.001
+        weight: 1
+      - path: Armature/Bone.001/Bone.002
+        weight: 1
+      - path: Armature/Bone.001/Bone.002/Bone.002_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.003
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007/Bone.007_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.004
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008/Bone.008_end
+        weight: 1
+      - path: Armature/Bone.010
+        weight: 1
+      - path: Armature/Bone.010/Bone.012
+        weight: 1
+      - path: Armature/Bone.010/Bone.012/Bone.012_end
+        weight: 1
+      - path: Armature/Bone.011
+        weight: 1
+      - path: Armature/Bone.011/Bone.013
+        weight: 1
+      - path: Armature/Bone.011/Bone.013/Bone.013_end
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Lleg
+        weight: 1
+      - path: Rleg
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|harpy_flyAttack.001
+      takeName: Armature|harpy_flyAttack.001
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _Head
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone.009
+        weight: 1
+      - path: Armature/Bone/Bone.009/Bone.009_end
+        weight: 1
+      - path: Armature/Bone.001
+        weight: 1
+      - path: Armature/Bone.001/Bone.002
+        weight: 1
+      - path: Armature/Bone.001/Bone.002/Bone.002_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.003
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007/Bone.007_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.004
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008/Bone.008_end
+        weight: 1
+      - path: Armature/Bone.010
+        weight: 1
+      - path: Armature/Bone.010/Bone.012
+        weight: 1
+      - path: Armature/Bone.010/Bone.012/Bone.012_end
+        weight: 1
+      - path: Armature/Bone.011
+        weight: 1
+      - path: Armature/Bone.011/Bone.013
+        weight: 1
+      - path: Armature/Bone.011/Bone.013/Bone.013_end
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Lleg
+        weight: 1
+      - path: Rleg
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|harpy_dive
+      takeName: Armature|harpy_attack1
+      firstFrame: 18.3
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _Head
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone.009
+        weight: 1
+      - path: Armature/Bone/Bone.009/Bone.009_end
+        weight: 1
+      - path: Armature/Bone.001
+        weight: 1
+      - path: Armature/Bone.001/Bone.002
+        weight: 1
+      - path: Armature/Bone.001/Bone.002/Bone.002_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.003
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007/Bone.007_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.004
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008/Bone.008_end
+        weight: 1
+      - path: Armature/Bone.010
+        weight: 1
+      - path: Armature/Bone.010/Bone.012
+        weight: 1
+      - path: Armature/Bone.010/Bone.012/Bone.012_end
+        weight: 1
+      - path: Armature/Bone.011
+        weight: 1
+      - path: Armature/Bone.011/Bone.013
+        weight: 1
+      - path: Armature/Bone.011/Bone.013/Bone.013_end
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Lleg
+        weight: 1
+      - path: Rleg
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|harpy_flyHover
+      takeName: Armature|harpy_flyAttack
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _Head
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone.009
+        weight: 1
+      - path: Armature/Bone/Bone.009/Bone.009_end
+        weight: 1
+      - path: Armature/Bone.001
+        weight: 1
+      - path: Armature/Bone.001/Bone.002
+        weight: 1
+      - path: Armature/Bone.001/Bone.002/Bone.002_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.003
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007
+        weight: 1
+      - path: Armature/Bone.001/Bone.003/Bone.005/Bone.007/Bone.007_end
+        weight: 1
+      - path: Armature/Bone.001/Bone.004
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008
+        weight: 1
+      - path: Armature/Bone.001/Bone.004/Bone.006/Bone.008/Bone.008_end
+        weight: 1
+      - path: Armature/Bone.010
+        weight: 1
+      - path: Armature/Bone.010/Bone.012
+        weight: 1
+      - path: Armature/Bone.010/Bone.012/Bone.012_end
+        weight: 1
+      - path: Armature/Bone.011
+        weight: 1
+      - path: Armature/Bone.011/Bone.013
+        weight: 1
+      - path: Armature/Bone.011/Bone.013/Bone.013_end
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Lleg
+        weight: 1
+      - path: Rleg
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
