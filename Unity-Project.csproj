@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\CollisionCheck.cs" />
     <Compile Include="Assets\Scripts\CyclopAIControl.cs" />
     <Compile Include="Assets\Scripts\DieAndRespawn.cs" />
+    <Compile Include="Assets\Scripts\HarpyAIController.cs" />
     <Compile Include="Assets\Scripts\Item01.cs" />
     <Compile Include="Assets\Scripts\Items.cs" />
     <Compile Include="Assets\Scripts\MainCameraScript.cs" />
