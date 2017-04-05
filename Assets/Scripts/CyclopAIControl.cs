@@ -8,20 +8,20 @@ public class CyclopAIControl : MonoBehaviour {
 	 public CharacterController control;
 	 public GameObject player;
  
-     public int gravity, followRange, hitRange, dashRange;
+     public int gravity, followRange, hitRange, dashRange, dashForce;
 	 public float moveSpeed, turnSpeed, maxDashTime, maxHitTime;
 
 	 private Vector3 moveVector, playerRotation, monsterRotation;
 	 private bool isColliding = false, inRange =false;
-	 private float currentDashTime = 0, currentHitTime = 0, currentSpeed, dashCoolDownCounter, hitCoolDownCounter, dashCoolDown = 8, hitCoolDown = 1;
-	 private enum CyclopAction {Neutral, Attacking, Hitting, Dashing}
+	 private float currentDashTime = 0, currentHitTime = 0, currentSpeed, 
+	 	dashCoolDownCounter, hitCoolDownCounter, dashCoolDown = 8, hitCoolDown = 1, skillCoolDownCounter, skillCoolDown=1;
+	 public enum CyclopAction {Neutral, Attacking, Hitting, Dashing}
 	 private CyclopAction cyclopAction;
 
 	// Use this for initialization
 	void Start () {
 		animator = gameObject.GetComponentInChildren<Animator>();
 		control = gameObject.GetComponent<CharacterController>();
-		player = GameObject.FindWithTag("Player");
 		currentSpeed = moveSpeed;
 		cyclopAction = CyclopAction.Neutral;
 		animator.SetInteger("attacking", 0);
@@ -33,13 +33,15 @@ public class CyclopAIControl : MonoBehaviour {
 		float distance = Vector3.Distance(transform.position, player.transform.position);
 		inRange = distance < followRange;
 
-		if(cyclopAction == CyclopAction.Neutral && inRange){
+		//Debug.Log(animator.GetInteger("attacking") + " " + animator.GetInteger("hitting") );
+
+		if(cyclopAction == CyclopAction.Neutral && inRange && distance > hitRange){
 			animator.SetInteger("attacking", 1);
 			cyclopAction = CyclopAction.Attacking;
 		}
 		
 		if(inRange){
-			///Debug.Log(cyclopAction);
+			
 			if(cyclopAction == CyclopAction.Hitting){
 				animator.SetInteger("hitting", 1);
 				moveVector = Vector3.zero;
@@ -47,8 +49,8 @@ public class CyclopAIControl : MonoBehaviour {
 				if(currentHitTime > maxHitTime){
 					currentHitTime = 0;
 					animator.SetInteger("hitting", 0);
-					animator.SetInteger("attacking", 1);
-					cyclopAction = CyclopAction.Attacking;
+					animator.SetInteger("attacking", 0);
+					cyclopAction = CyclopAction.Neutral;
 				}
 			}
 			else if(cyclopAction == CyclopAction.Dashing){
@@ -59,6 +61,7 @@ public class CyclopAIControl : MonoBehaviour {
 					currentDashTime = 0;
 					currentSpeed -= 30;
 					cyclopAction = CyclopAction.Attacking;
+					skillCoolDownCounter = Time.time + skillCoolDown;
 				}
 			}
 			else if(cyclopAction == CyclopAction.Attacking){
@@ -71,12 +74,12 @@ public class CyclopAIControl : MonoBehaviour {
 				if(distance < 1){ //in normal mode, very near cant walk
 					moveVector = Vector3.zero;
 				}
-				if(distance < hitRange && Time.time > hitCoolDownCounter){
+				if(distance < hitRange && Time.time > hitCoolDownCounter && Time.time > skillCoolDownCounter){
 					hitCoolDownCounter = Time.time + hitCoolDown;
 					currentHitTime = 0;
 					cyclopAction = CyclopAction.Hitting;
 				}
-				else if(distance < dashRange && Time.time > dashCoolDownCounter){
+				else if(distance < dashRange && Time.time > dashCoolDownCounter && Time.time > skillCoolDownCounter){
 					dashCoolDownCounter = Time.time + dashCoolDown;
 					currentSpeed += 30;
 					currentDashTime = 0;
@@ -103,4 +106,13 @@ public class CyclopAIControl : MonoBehaviour {
 			isColliding = false;
 		}
     }
+
+	public CyclopAction gsCyclopAction{
+		get {return cyclopAction;}
+		set {cyclopAction = value;}
+	}
+
+	public void aaa(){
+		
+	}
 }

@@ -67,7 +67,7 @@ public class HarpyAIController : MonoBehaviour {
 				else if(currentDashTime+(maxDashTime*0.2)> maxDashTime){
 					animator.SetInteger("flying", 3);
 				}
-				else if(currentDashTime < 40){
+				else if(currentDashTime < 20){
 					animator.SetInteger("flying", 1);
 					moveVector = Vector3.zero;
 					harpyXZPosition = new Vector3(transform.position.x, 0, transform.position.z);
