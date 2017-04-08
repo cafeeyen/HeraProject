@@ -17,6 +17,11 @@ public class Map05_Camera : MonoBehaviour
     
     void LateUpdate ()
     {
+        if ( player.transform.position.z <= 230)
+        {
+            offset.z = 190 - player.transform.position.z;
+        }
+
         if (player.transform.position.z >= 550 && player.transform.position.z <= 660 && player.transform.position.y < 15)
         {
             angle_x = (660 - player.transform.position.z) / (110f / 25f);
