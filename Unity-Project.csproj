@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\LoadScene.cs" />
     <Compile Include="Assets\Scripts\LoadingScreenManager.cs" />
     <Compile Include="Assets\Scripts\MainCameraScript.cs" />
+    <Compile Include="Assets\Scripts\Map02_Camera.cs" />
     <Compile Include="Assets\Scripts\Map03_Camera.cs" />
     <Compile Include="Assets\Scripts\Map05_Camera.cs" />
     <Compile Include="Assets\Scripts\Map06_Camera.cs" />
