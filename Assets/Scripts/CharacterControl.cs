@@ -62,6 +62,7 @@ public class CharacterControl: MonoBehaviour
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
             moveDirection = (h * turn + v * forward);
+            Debug.Log(moveDirection);
 
             if (water)
                 moveDirection *= charSpeed * 0.5f;
