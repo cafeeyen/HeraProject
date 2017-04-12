@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{78CAD977-9EE3-70F0-9B30-A932B6747953}</ProjectGuid>
+    <ProjectGuid>{CBB7CD08-3741-B9D6-1139-76614EDC2D21}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ActivateTextAtLine.cs" />
      <Compile Include="Assets\Scripts\CameraScript.cs" />
      <Compile Include="Assets\Scripts\CharacterControl.cs" />
      <Compile Include="Assets\Scripts\CollisionCheck.cs" />
@@ -57,12 +58,34 @@
      <Compile Include="Assets\Scripts\LoadScene.cs" />
      <Compile Include="Assets\Scripts\LoadingScreenManager.cs" />
      <Compile Include="Assets\Scripts\MainCameraScript.cs" />
+     <Compile Include="Assets\Scripts\Map02_Camera.cs" />
      <Compile Include="Assets\Scripts\Map03_Camera.cs" />
      <Compile Include="Assets\Scripts\Map05_Camera.cs" />
+     <Compile Include="Assets\Scripts\Map06_Camera.cs" />
      <Compile Include="Assets\Scripts\MinimapCamera.cs" />
+     <Compile Include="Assets\Scripts\PauseMenuUIScript.cs" />
      <Compile Include="Assets\Scripts\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\StartMenuCanvasScript.cs" />
+     <Compile Include="Assets\Scripts\TextBoxManager.cs" />
      <Compile Include="Assets\Scripts\nyaBehaviourScript.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\Attributes\USLUAttributes.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\ExampleScriptsAndClasses\TestClass.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\ExampleScriptsAndClasses\TestScript.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\Non-Mono Classes\ObjectComponent.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\Non-Mono Classes\SaveGame.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\Non-Mono Classes\SceneObject.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\ObjectIdentifier.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\PersistenceMarker.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\SaveLoad.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\SaveLoadMenu.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\SaveLoadUtility.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\Surrogates\Color32Surrogate.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\Surrogates\ColorSurrogate.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\Surrogates\QuaternionSurrogate.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\Surrogates\Vector2Surrogate.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\Surrogates\Vector3Surrogate.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\Surrogates\Vector4Surrogate.cs" />
+     <Compile Include="Assets\Unity Save Load Utility\Utilities\TypeSystem.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
@@ -134,6 +157,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\2D GUI\dialog01.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
@@ -171,7 +195,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{673C2060-8804-036F-DAAD-7A5F49CB1957}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{3B33F8DC-959E-265E-1DA7-748F0188F983}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
