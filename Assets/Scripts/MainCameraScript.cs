@@ -13,10 +13,12 @@ public class MainCameraScript : MonoBehaviour {
     {
         transform.position = new Vector3(player.transform.position.x + X_CAMERA, player.transform.position.y + Y_CAMERA, player.transform.position.z + Z_CAMERA);
         offset = transform.position - player.transform.position;
+        //player = GameObject.FindGameObjectWithTag("Player");
     }
     
     void LateUpdate () 
     {
+        //player = GameObject.FindGameObjectWithTag("Player");
         transform.position = player.transform.position + offset;
     }
 }
