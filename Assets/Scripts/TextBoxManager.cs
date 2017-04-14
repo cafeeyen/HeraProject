@@ -48,7 +48,8 @@ public class TextBoxManager : MonoBehaviour {
 			disableTextBox();
 		}
 
-		if(Input.GetKeyDown(KeyCode.Space) && isTextboxActive){
+		if(Input.GetKeyDown(KeyCode.Space) && isTextboxActive && Time.timeScale != 0)
+        {
 			currentLine += 1;
 		}
 

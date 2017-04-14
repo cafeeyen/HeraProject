@@ -9,7 +9,6 @@ public class CollisionCheck : MonoBehaviour
     private PlayerInventory pInventory;
     private CharacterControl cc;
 
-
     // Use this for initialization
     void Start ()
     {
@@ -42,6 +41,8 @@ public class CollisionCheck : MonoBehaviour
     {
         if(other.gameObject.CompareTag("WalkableWater"))
             cc.isWater(true);
+        if (other.gameObject.CompareTag("SavePoint"))
+            SaveLoad.Save();
     }
 
     private void OnTriggerExit(Collider other)
