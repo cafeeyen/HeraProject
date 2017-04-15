@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CBB7CD08-3741-B9D6-1139-76614EDC2D21}</ProjectGuid>
+    <ProjectGuid>{01F196A5-7A6A-2EBC-8803-22B656114C04}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,46 +46,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AI\CyclopAIControl.cs" />
+     <Compile Include="Assets\Scripts\AI\HarpyAIController.cs" />
      <Compile Include="Assets\Scripts\ActivateTextAtLine.cs" />
-     <Compile Include="Assets\Scripts\CameraScript.cs" />
+     <Compile Include="Assets\Scripts\Camera\MainCameraScript.cs" />
+     <Compile Include="Assets\Scripts\Camera\Map02_Camera.cs" />
+     <Compile Include="Assets\Scripts\Camera\Map03_Camera.cs" />
+     <Compile Include="Assets\Scripts\Camera\Map05_Camera.cs" />
+     <Compile Include="Assets\Scripts\Camera\Map06_Camera.cs" />
      <Compile Include="Assets\Scripts\CharacterControl.cs" />
      <Compile Include="Assets\Scripts\CollisionCheck.cs" />
-     <Compile Include="Assets\Scripts\CyclopAIControl.cs" />
      <Compile Include="Assets\Scripts\DieAndRespawn.cs" />
-     <Compile Include="Assets\Scripts\HarpyAIController.cs" />
      <Compile Include="Assets\Scripts\Item01.cs" />
      <Compile Include="Assets\Scripts\Items.cs" />
-     <Compile Include="Assets\Scripts\LoadScene.cs" />
-     <Compile Include="Assets\Scripts\LoadingScreenManager.cs" />
-     <Compile Include="Assets\Scripts\MainCameraScript.cs" />
-     <Compile Include="Assets\Scripts\Map02_Camera.cs" />
-     <Compile Include="Assets\Scripts\Map03_Camera.cs" />
-     <Compile Include="Assets\Scripts\Map05_Camera.cs" />
-     <Compile Include="Assets\Scripts\Map06_Camera.cs" />
      <Compile Include="Assets\Scripts\MinimapCamera.cs" />
-     <Compile Include="Assets\Scripts\PauseMenuUIScript.cs" />
      <Compile Include="Assets\Scripts\PlayerInventory.cs" />
-     <Compile Include="Assets\Scripts\StartMenuCanvasScript.cs" />
+     <Compile Include="Assets\Scripts\System\GameController.cs" />
+     <Compile Include="Assets\Scripts\System\GameData.cs" />
+     <Compile Include="Assets\Scripts\System\LoadScene.cs" />
+     <Compile Include="Assets\Scripts\System\LoadingScreenManager.cs" />
+     <Compile Include="Assets\Scripts\System\SaveLoad.cs" />
+     <Compile Include="Assets\Scripts\System\StartMenu.cs" />
      <Compile Include="Assets\Scripts\TextBoxManager.cs" />
      <Compile Include="Assets\Scripts\nyaBehaviourScript.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\Attributes\USLUAttributes.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\ExampleScriptsAndClasses\TestClass.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\ExampleScriptsAndClasses\TestScript.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\Non-Mono Classes\ObjectComponent.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\Non-Mono Classes\SaveGame.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\Non-Mono Classes\SceneObject.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\ObjectIdentifier.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\PersistenceMarker.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\SaveLoad.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\SaveLoadMenu.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\SaveLoadUtility.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\Surrogates\Color32Surrogate.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\Surrogates\ColorSurrogate.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\Surrogates\QuaternionSurrogate.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\Surrogates\Vector2Surrogate.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\Surrogates\Vector3Surrogate.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\Surrogates\Vector4Surrogate.cs" />
-     <Compile Include="Assets\Unity Save Load Utility\Utilities\TypeSystem.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
@@ -195,7 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{3B33F8DC-959E-265E-1DA7-748F0188F983}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{76C16343-045E-AA3D-16AC-BD682F144C68}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

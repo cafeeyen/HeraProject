@@ -14,7 +14,7 @@ public class LoadScene : MonoBehaviour
 		if(col.gameObject.CompareTag("Player"))
 		{
             GameData.data.map = scene;
-			SceneManager.LoadScene(scene);
+			LoadingScreenManager.LoadScene(scene);
 		}
 	}
 }

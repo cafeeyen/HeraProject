@@ -16,6 +16,7 @@ public static class SaveLoad
         FileStream file = File.Create(Path.Combine(Application.persistentDataPath, "hera.sav"));
         bf.Serialize(file, SaveLoad.savedGames);
         file.Close();
+        Debug.Log("Saved map " +GameData.data.map);
     }
 
     public static void Load()
@@ -27,6 +28,7 @@ public static class SaveLoad
             SaveLoad.savedGames = (GameData)bf.Deserialize(file);
             GameData.data = savedGames;
             file.Close();
+            Debug.Log("Loaded map " +GameData.data.map);
         }
     }
 }
