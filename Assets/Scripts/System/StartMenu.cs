@@ -13,6 +13,11 @@ public class StartMenu : MonoBehaviour
 
     public Menu currentMenu;
 
+    private void Start()
+    {
+        SaveLoad.Load();
+    }
+
     void OnGUI()
     {
 
@@ -24,8 +29,6 @@ public class StartMenu : MonoBehaviour
 
         if (currentMenu == Menu.MainMenu)
         {
-            SaveLoad.Load();
-
             GUILayout.Box("Title here");
             GUILayout.Space(10);
 
