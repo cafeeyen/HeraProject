@@ -11,7 +11,6 @@ public static class SaveLoad
 
     public static void Save()
     {
-        GameData.data.updateData();
         savedGames = GameData.data;
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Path.Combine(Application.persistentDataPath, "hera.sav"));
@@ -26,6 +25,7 @@ public static class SaveLoad
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Path.Combine(Application.persistentDataPath, "hera.sav"), FileMode.Open);
             SaveLoad.savedGames = (GameData)bf.Deserialize(file);
+            GameData.data = savedGames;
             file.Close();
         }
     }

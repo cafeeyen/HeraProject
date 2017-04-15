@@ -94,12 +94,12 @@
     <Compile Include="Assets\Scripts\DieAndRespawn.cs" />
     <Compile Include="Assets\Scripts\Item01.cs" />
     <Compile Include="Assets\Scripts\Items.cs" />
-    <Compile Include="Assets\Scripts\LoadScene.cs" />
-    <Compile Include="Assets\Scripts\LoadingScreenManager.cs" />
     <Compile Include="Assets\Scripts\MinimapCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerInventory.cs" />
     <Compile Include="Assets\Scripts\System\GameController.cs" />
     <Compile Include="Assets\Scripts\System\GameData.cs" />
+    <Compile Include="Assets\Scripts\System\LoadScene.cs" />
+    <Compile Include="Assets\Scripts\System\LoadingScreenManager.cs" />
     <Compile Include="Assets\Scripts\System\SaveLoad.cs" />
     <Compile Include="Assets\Scripts\System\StartMenu.cs" />
     <Compile Include="Assets\Scripts\TextBoxManager.cs" />

@@ -16,13 +16,4 @@ public class GameData
         exp = 0;
         map = 0;
     }
-
-    public void updateData()
-    {
-        if (data == null)
-            data = SaveLoad.savedGames;
-
-        map = SceneManager.GetActiveScene().buildIndex;
-    }
-
 }

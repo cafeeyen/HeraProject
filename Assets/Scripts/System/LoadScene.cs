@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadScene : MonoBehaviour {
+public class LoadScene : MonoBehaviour
+{
 
 	public int scene;
 
@@ -12,6 +13,7 @@ public class LoadScene : MonoBehaviour {
 	{
 		if(col.gameObject.CompareTag("Player"))
 		{
+            GameData.data.map = scene;
 			SceneManager.LoadScene(scene);
 		}
 	}
