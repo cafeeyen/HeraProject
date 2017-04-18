@@ -42,7 +42,6 @@ public class LoadingScreenManager : MonoBehaviour
 
     public static void LoadScene(int levelNum)
     {
-        Debug.Log(levelNum);
         GameData.data.map = levelNum;
         Application.backgroundLoadingPriority = ThreadPriority.High;
         sceneToLoad = levelNum;
@@ -94,7 +93,7 @@ public class LoadingScreenManager : MonoBehaviour
         yield return new WaitForSeconds(fadeDuration);
 
         if (loadSceneMode == LoadSceneMode.Additive)
-            SceneManager.UnloadScene(currentScene.name);
+            SceneManager.UnloadSceneAsync(currentScene.name);
         else
             operation.allowSceneActivation = true;
     }

@@ -12,7 +12,7 @@ public class CyclopAIControl : MonoBehaviour {
 	 public float moveSpeed, turnSpeed, maxDashTime, maxHitTime;
 
 	 private Vector3 moveVector, playerRotation, monsterRotation;
-	 private bool isColliding = false, inRange =false;
+	 private bool isColliding = false, inRange = false;
 	 private float currentDashTime = 0, currentHitTime = 0, currentSpeed, 
 	 	dashCoolDownCounter, hitCoolDownCounter, dashCoolDown = 8, hitCoolDown = 1, skillCoolDownCounter, skillCoolDown=1;
 	 public enum CyclopAction {Neutral, Attacking, Hitting, Dashing}

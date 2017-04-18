@@ -35,6 +35,7 @@ public class StartMenu : MonoBehaviour
             if (GUILayout.Button("New Game"))
             {
                 GameData.data = new GameData();
+                PlayerInventory.inventory = new PlayerInventory();
                 currentMenu = Menu.NewGame;
             }
 
@@ -52,7 +53,7 @@ public class StartMenu : MonoBehaviour
         }
 
         else if (currentMenu == Menu.NewGame)
-            LoadingScreenManager.LoadScene(1);
+            LoadingScreenManager.LoadScene(8);
 
         else if (currentMenu == Menu.Continue)
             LoadingScreenManager.LoadScene(SaveLoad.savedGames.map);

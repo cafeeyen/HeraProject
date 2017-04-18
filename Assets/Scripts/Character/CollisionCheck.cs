@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class CollisionCheck : MonoBehaviour
 {
-
     private DieAndRespawn dieAndRespawn;
-    private PlayerInventory pInventory;
     private CharacterControl cc;
 
     // Use this for initialization
     void Start ()
     {
 		dieAndRespawn = gameObject.GetComponent<DieAndRespawn>();
-        pInventory = gameObject.GetComponent<PlayerInventory>();
         cc = gameObject.GetComponent<CharacterControl>();
+        PlayerInventory.inventory.createBlankItem();
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit hit)
@@ -32,7 +30,13 @@ public class CollisionCheck : MonoBehaviour
         else if (body.gameObject.tag == "Item01")
         {
             Debug.Log("Got Item01");
-            pInventory.addItem(body.gameObject.GetComponent<Item01>());
+            PlayerInventory.inventory.addItem(new Item01());
+            Destroy(body.gameObject);
+        }
+        else if (body.gameObject.tag == "Helmet01")
+        {
+            Debug.Log("Got Helmet01");
+            PlayerInventory.inventory.addItem(new Helmet01());
             Destroy(body.gameObject);
         }
     }

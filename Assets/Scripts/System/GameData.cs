@@ -7,14 +7,14 @@ using System;
 public class GameData
 {
     public static GameData data;
-    public int lv, exp, next, map;
+    public int lv, exp, next, map, itemID;
 
-    private int baseHp, baseAtk, baseDef;
+    private int  baseHp, baseAtk, baseDef;
     // Inventory Add here
-
 
     public GameData()
     {
+        itemID = 0;
         lv = 1;
         baseAtk = 10;
         baseDef = 4;
