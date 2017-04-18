@@ -5,20 +5,21 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
 
-public class SlotScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler{
+public class SlotScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
+{
     
 	public Items item;
-	Image itemImage;
 	public int slotNumber;
 
+    Image itemImage;
 
-    // Use this for initialization
-	void Start () {
+    void Start ()
+    {
 		itemImage = gameObject.transform.GetChild(0).GetComponent<Image>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void Update ()
+    {
 		if(item != null)
 		{
 			itemImage.enabled = true;
@@ -36,8 +37,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     {
         if(item != null)
 		{
-			Debug.Log(item.names + " " + itemImage.name);
-			
+			//Debug.Log(item.names + " " + itemImage.name);
 		}
     }
 	
