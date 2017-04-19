@@ -6,12 +6,14 @@ public class CollisionCheck : MonoBehaviour
 {
     private DieAndRespawn dieAndRespawn;
     private CharacterControl cc;
+    private ParticleController par;
 
     // Use this for initialization
     void Start ()
     {
 		dieAndRespawn = gameObject.GetComponent<DieAndRespawn>();
         cc = gameObject.GetComponent<CharacterControl>();
+        par = gameObject.GetComponent<ParticleController>();
         PlayerInventory.inventory.createBlankItem();
 	}
 
@@ -32,12 +34,28 @@ public class CollisionCheck : MonoBehaviour
             Debug.Log("Got Item01");
             PlayerInventory.inventory.addItem(new Item01());
             Destroy(body.gameObject);
+            par.playParticle(new Color(1, 0, 0, 1));
         }
         else if (body.gameObject.tag == "Helmet01")
         {
             Debug.Log("Got Helmet01");
             PlayerInventory.inventory.addItem(new Helmet01());
             Destroy(body.gameObject);
+            par.playParticle(new Color(1, 1, 0, 1));
+        }
+        else if (body.gameObject.tag == "Robe01")
+        {
+            Debug.Log("Got Robe01");
+            PlayerInventory.inventory.addItem(new Robe01());
+            Destroy(body.gameObject);
+            par.playParticle(new Color(0, 1, 1, 1));
+        }
+        else if (body.gameObject.tag == "Pohpae01")
+        {
+            Debug.Log("Got Pohpae01");
+            PlayerInventory.inventory.addItem(new Pohpae01());
+            Destroy(body.gameObject);
+            par.playParticle(new Color(1, 0.92f, 0.016f, 1));
         }
     }
 

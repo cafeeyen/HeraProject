@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A4786994-238C-B51B-46E2-5DBEE74E0E97}</ProjectGuid>
+    <ProjectGuid>{6E3F3950-7FCD-710D-CB32-E5FA2AF1E7B2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Character\CharacterControl.cs" />
      <Compile Include="Assets\Scripts\Character\CollisionCheck.cs" />
      <Compile Include="Assets\Scripts\Character\DieAndRespawn.cs" />
+     <Compile Include="Assets\Scripts\Character\ParticleController.cs" />
      <Compile Include="Assets\Scripts\ItemInventory\BlankItem.cs" />
      <Compile Include="Assets\Scripts\ItemInventory\CharacterWindow.cs" />
      <Compile Include="Assets\Scripts\ItemInventory\Equipment.cs" />
@@ -65,7 +66,9 @@
      <Compile Include="Assets\Scripts\ItemInventory\Item01.cs" />
      <Compile Include="Assets\Scripts\ItemInventory\Items.cs" />
      <Compile Include="Assets\Scripts\ItemInventory\PlayerInventory.cs" />
+     <Compile Include="Assets\Scripts\ItemInventory\Pohpae01.cs" />
      <Compile Include="Assets\Scripts\ItemInventory\Rarity.cs" />
+     <Compile Include="Assets\Scripts\ItemInventory\Robe01.cs" />
      <Compile Include="Assets\Scripts\ItemInventory\SlotEquipmentScript.cs" />
      <Compile Include="Assets\Scripts\ItemInventory\SlotScript.cs" />
      <Compile Include="Assets\Scripts\MinimapCamera.cs" />
@@ -186,7 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{54E4F5AE-9F49-35BF-3FAC-E4CD1D11688D}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{FA3735B7-970D-31E5-9141-F7A7B006DA79}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

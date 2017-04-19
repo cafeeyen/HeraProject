@@ -43,7 +43,7 @@ public class CharacterWindow : MonoBehaviour
             if (!characterMenu.activeInHierarchy) isMouseOver = false;
         }
 
-        if (isMouseOver)
+        if (isMouseOver && !(currentItem is BlankItem))
         {
             toolTipPanel.SetActive(true);
             toolTipPanel.transform.position = Input.mousePosition + new Vector3(50, -100f, 0f);
