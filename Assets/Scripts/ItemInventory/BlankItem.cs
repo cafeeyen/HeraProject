@@ -18,24 +18,9 @@ public class BlankItem :  Equipment {
 	public BlankItem(int gid)
 	{
 		iid = gid;
-		// iid = GameData.data.itemID;
-		// GameData.data.itemID += 1; 
 	}
 
-	public BlankItem()
-	{
-	}
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+	public BlankItem() {}
 
 	//getter setter
 	public int id

@@ -22,25 +22,13 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     {
 		if(item != null)
 		{
-			itemImage.enabled = true;
 			itemImage.name = "image" + slotNumber;
 			itemImage.sprite = item.icon;
-		}
-		else
-		{
-			itemImage.enabled = false;	
 		}
 	}
 
 
-	void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
-    {
-        if(item != null)
-		{
-			//Debug.Log(item.names + " " + itemImage.name);
-		}
-    }
-	
+	void IPointerClickHandler.OnPointerClick(PointerEventData eventData) { }
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
 		CharacterWindow.isMouseOver = true;

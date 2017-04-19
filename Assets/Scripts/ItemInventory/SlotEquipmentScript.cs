@@ -12,35 +12,38 @@ public class SlotEquipmentScript : MonoBehaviour, IPointerClickHandler, IPointer
     public Items item;
     public string slotName = "";
 
+    void Start()
+    {
+        item = new BlankItem();
+    }
+
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
     }
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        //Debug.Log("overSP" + " " + slotFor.ToString());
         CharacterWindow.isMouseOver = true;
         if (slotFor == EquipmentType.None) CharacterWindow.putOver = slotName;
         else CharacterWindow.putOver = slotFor.ToString();
+        CharacterWindow.currentItem = item;
         CharacterWindow.overSpecialSlot = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //Debug.Log("resetSP" + " " + slotFor.ToString());
         CharacterWindow.isMouseOver = false;
         CharacterWindow.overSpecialSlot = false;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        //Debug.Log("dragItemSP" + " " +slotFor.ToString());
         CharacterWindow.dragging = true;
+        CharacterWindow.spDragItem = item;
     }
     public void OnPointerUp(PointerEventData eventData)
     {
         CharacterWindow.releaseDrag = true;
         CharacterWindow.dragging = false;
-        //Debug.Log("releaseDragSP" + " " +slotFor.ToString());
     }
 }

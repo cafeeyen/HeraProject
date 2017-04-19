@@ -6,7 +6,7 @@ public class PlayerInventory : MonoBehaviour
 {
     public List<Items> pIList; //Player Item List
     public static PlayerInventory inventory;
-    public int INVENTORY_SIZE = 16, addIndex = -1;
+    public int INVENTORY_SIZE = 16, changeIndex = -1;
 
     public PlayerInventory()
     {
@@ -37,7 +37,7 @@ public class PlayerInventory : MonoBehaviour
                 if (pIList[i].names == "blank")
                 {
                     pIList[i] = item;
-                    addIndex = i;
+                    changeIndex = i;
                     break;
                 }
             }
