@@ -53,7 +53,7 @@ public class StartMenu : MonoBehaviour
         }
 
         else if (currentMenu == Menu.NewGame)
-            LoadingScreenManager.LoadScene(8);
+            LoadingScreenManager.LoadScene(5);
 
         else if (currentMenu == Menu.Continue)
             LoadingScreenManager.LoadScene(SaveLoad.savedGames.map);
