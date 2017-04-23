@@ -20,6 +20,7 @@ public class LoadingScreenManager : MonoBehaviour
     public Text loadingText;
     public Image progressBar;
     public Image fadeOverlay;
+    public CharacterController cc;
 
     [Header("Timing Settings")]
     public float waitOnLoadEnd = 0.25f;
@@ -36,13 +37,15 @@ public class LoadingScreenManager : MonoBehaviour
     AsyncOperation operation;
     Scene currentScene;
 
+    public static Vector3 spawnPosition;
     public static int sceneToLoad = -1;
     // IMPORTANT! This is the build index of your loading scene. You need to change this to match your actual scene index
     static int loadingSceneIndex = 7;
 
-    public static void LoadScene(int levelNum)
+    public static void LoadScene(int levelNum, Vector3 spawnTo)
     {
         GameData.data.map = levelNum;
+        spawnPosition = spawnTo;
         Application.backgroundLoadingPriority = ThreadPriority.High;
         sceneToLoad = levelNum;
         SceneManager.LoadScene(loadingSceneIndex);
@@ -93,9 +96,15 @@ public class LoadingScreenManager : MonoBehaviour
         yield return new WaitForSeconds(fadeDuration);
 
         if (loadSceneMode == LoadSceneMode.Additive)
+        {
             SceneManager.UnloadSceneAsync(currentScene.name);
+        }
+            
         else
+        {
             operation.allowSceneActivation = true;
+        }
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
 
     private void StartOperation(int levelNum)
@@ -141,5 +150,15 @@ public class LoadingScreenManager : MonoBehaviour
         loadingText.text = "DONE";
         loadingText.color = new Color(223, 255, 161);
     }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+        {
+            Debug.Log("Level Loaded" + scene.name + " at:" + spawnPosition);
+            if(scene.name != "LoadingScreen")
+            {
+                GameObject.FindWithTag("Player").transform.position = spawnPosition;
+            }
+            
+        }
 
 }

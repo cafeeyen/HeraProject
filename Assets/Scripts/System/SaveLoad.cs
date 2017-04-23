@@ -13,17 +13,17 @@ public static class SaveLoad
     {
         savedGames = GameData.data;
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Path.Combine(Application.persistentDataPath, "hera.sav"));
+        FileStream file = File.Create(Path.Combine(Application.persistentDataPath, "hera01.sav"));
         bf.Serialize(file, SaveLoad.savedGames);
         file.Close();
     }
 
     public static void Load()
     {
-        if (File.Exists(Path.Combine(Application.persistentDataPath, "hera.sav")))
+        if (File.Exists(Path.Combine(Application.persistentDataPath, "hera01.sav")))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Path.Combine(Application.persistentDataPath, "hera.sav"), FileMode.Open);
+            FileStream file = File.Open(Path.Combine(Application.persistentDataPath, "hera01.sav"), FileMode.Open);
             SaveLoad.savedGames = (GameData)bf.Deserialize(file);
             GameData.data = savedGames;
             file.Close();

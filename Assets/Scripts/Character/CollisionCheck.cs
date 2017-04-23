@@ -65,6 +65,9 @@ public class CollisionCheck : MonoBehaviour
             cc.isWater(true);
         if (other.gameObject.CompareTag("SavePoint"))
             SaveLoad.Save();
+            GameData.data.posx = cc.gameObject.transform.position.x;
+            GameData.data.posy = cc.gameObject.transform.position.y;
+            GameData.data.posz = cc.gameObject.transform.position.z;
     }
 
     private void OnTriggerExit(Collider other)

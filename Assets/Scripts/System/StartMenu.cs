@@ -53,10 +53,10 @@ public class StartMenu : MonoBehaviour
         }
 
         else if (currentMenu == Menu.NewGame)
-            LoadingScreenManager.LoadScene(5);
+            LoadingScreenManager.LoadScene(1, new Vector3(154, 3, 142));
 
         else if (currentMenu == Menu.Continue)
-            LoadingScreenManager.LoadScene(SaveLoad.savedGames.map);
+            LoadingScreenManager.LoadScene(SaveLoad.savedGames.map, new Vector3(SaveLoad.savedGames.posx, SaveLoad.savedGames.posy, SaveLoad.savedGames.posz) );
 
         GUILayout.FlexibleSpace();
         GUILayout.EndVertical();

@@ -7,6 +7,7 @@ public class LoadScene : MonoBehaviour
 {
 
 	public int scene;
+	public Vector3 spawnTo;
 
 	// Use this for initialization
 	void OnTriggerEnter(Collider col)
@@ -14,7 +15,7 @@ public class LoadScene : MonoBehaviour
 		if(col.gameObject.CompareTag("Player"))
 		{
             GameData.data.map = scene;
-			LoadingScreenManager.LoadScene(scene);
+			LoadingScreenManager.LoadScene(scene, spawnTo);
 		}
 	}
 }

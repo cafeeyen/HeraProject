@@ -8,7 +8,7 @@ public class GameData
 {
     public static GameData data;
     public int lv, exp, next, map, itemID;
-
+    public float posx, posy, posz;
     private int  baseHp, baseAtk, baseDef;
     // Inventory Add here
 
@@ -22,6 +22,9 @@ public class GameData
         exp = 0;
         next = 100;
         map = 0;
+        posx = 154;
+        posy = 3;
+        posz = 142;
     }
 
     public void gainExp(int gain)
