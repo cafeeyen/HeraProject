@@ -34,8 +34,9 @@ public class StartMenu : MonoBehaviour
 
             if (GUILayout.Button("New Game"))
             {
-                GameData.data = new GameData();
                 PlayerInventory.inventory = new PlayerInventory();
+                PlayerInventory.inventory.createBlankItem();
+                GameData.data = new GameData();
                 currentMenu = Menu.NewGame;
             }
 

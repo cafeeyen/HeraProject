@@ -6,7 +6,7 @@ public class PlayerInventory : MonoBehaviour
 {
     public List<Items> pIList; //Player Item List
     public static PlayerInventory inventory;
-    public int INVENTORY_SIZE = 16, changeIndex = -1;
+    public int INVENTORY_SIZE = 20, changeIndex = -1;
 
     public PlayerInventory()
     {
@@ -15,6 +15,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void createBlankItem()
     {
+        Debug.Log("createBlankItem");
         for (int i = 0; i < INVENTORY_SIZE; i++)
         {
             pIList.Add(new BlankItem());

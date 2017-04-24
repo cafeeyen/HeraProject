@@ -14,7 +14,7 @@ public class CollisionCheck : MonoBehaviour
 		dieAndRespawn = gameObject.GetComponent<DieAndRespawn>();
         cc = gameObject.GetComponent<CharacterControl>();
         par = gameObject.GetComponent<ParticleController>();
-        PlayerInventory.inventory.createBlankItem();
+        
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit hit)
@@ -64,10 +64,11 @@ public class CollisionCheck : MonoBehaviour
         if(other.gameObject.CompareTag("WalkableWater"))
             cc.isWater(true);
         if (other.gameObject.CompareTag("SavePoint"))
-            SaveLoad.Save();
             GameData.data.posx = cc.gameObject.transform.position.x;
             GameData.data.posy = cc.gameObject.transform.position.y;
             GameData.data.posz = cc.gameObject.transform.position.z;
+            //GameData.data.inventory = PlayerInventory.inventory.pIList;
+            SaveLoad.Save();
     }
 
     private void OnTriggerExit(Collider other)

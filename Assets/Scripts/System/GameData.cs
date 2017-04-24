@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using System;
 
@@ -9,8 +10,9 @@ public class GameData
     public static GameData data;
     public int lv, exp, next, map, itemID;
     public float posx, posy, posz;
+    
     private int  baseHp, baseAtk, baseDef;
-    // Inventory Add here
+    //public List<Items> inventory;
 
     public GameData()
     {
@@ -25,6 +27,7 @@ public class GameData
         posx = 154;
         posy = 3;
         posz = 142;
+        //inventory = PlayerInventory.inventory.pIList;
     }
 
     public void gainExp(int gain)
