@@ -3,23 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class ParticleController : MonoBehaviour {
+public class ParticleController : MonoBehaviour
+{
 
 	public Transform sparkle;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		sparkle.GetComponent<ParticleSystem>().Stop();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	public void playParticle(Color color = new Color())
 	{
-		Debug.Log("binggg");
 		sparkle.GetComponent<ParticleSystem>().Play();
 		sparkle.GetComponent<ParticleSystem>().startColor = color;
 	}

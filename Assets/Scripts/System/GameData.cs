@@ -1,18 +1,13 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
+﻿using System.Collections.Generic;
 using System;
 
 [System.Serializable]
 public class GameData
 {
     public static GameData data;
-    public int lv, exp, next, map, itemID;
+    public int lv, exp, next, map, itemID, baseHp, baseAtk, baseDef;
     public float posx, posy, posz;
-    
-    private int  baseHp, baseAtk, baseDef;
-    //public List<Items> inventory;
+    public PlayerInventory inventory;
 
     public GameData()
     {
@@ -27,7 +22,7 @@ public class GameData
         posx = 154;
         posy = 3;
         posz = 142;
-        //inventory = PlayerInventory.inventory.pIList;
+        inventory = PlayerInventory.inventory;
     }
 
     public void gainExp(int gain)

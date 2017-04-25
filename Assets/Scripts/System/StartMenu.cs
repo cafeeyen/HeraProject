@@ -35,7 +35,6 @@ public class StartMenu : MonoBehaviour
             if (GUILayout.Button("New Game"))
             {
                 PlayerInventory.inventory = new PlayerInventory();
-                PlayerInventory.inventory.createBlankItem();
                 GameData.data = new GameData();
                 currentMenu = Menu.NewGame;
             }
@@ -54,7 +53,10 @@ public class StartMenu : MonoBehaviour
         }
 
         else if (currentMenu == Menu.NewGame)
-            LoadingScreenManager.LoadScene(1, new Vector3(154, 3, 142));
+            // Test map
+            LoadingScreenManager.LoadScene(8, new Vector3(154, 3, 142));
+            // Real map
+            //LoadingScreenManager.LoadScene(1, new Vector3(154, 3, 142));
 
         else if (currentMenu == Menu.Continue)
             LoadingScreenManager.LoadScene(SaveLoad.savedGames.map, new Vector3(SaveLoad.savedGames.posx, SaveLoad.savedGames.posy, SaveLoad.savedGames.posz) );

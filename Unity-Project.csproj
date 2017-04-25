@@ -81,6 +81,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AI\CaniHeadCollisionDetector.cs" />
+    <Compile Include="Assets\Scripts\AI\CaniTentacleCollisionDetector.cs" />
+    <Compile Include="Assets\Scripts\AI\CanipalntAIController.cs" />
     <Compile Include="Assets\Scripts\AI\CyclopAIControl.cs" />
     <Compile Include="Assets\Scripts\AI\HarpyAIController.cs" />
     <Compile Include="Assets\Scripts\ActivateTextAtLine.cs" />
@@ -92,17 +95,20 @@
     <Compile Include="Assets\Scripts\Character\CharacterControl.cs" />
     <Compile Include="Assets\Scripts\Character\CollisionCheck.cs" />
     <Compile Include="Assets\Scripts\Character\DieAndRespawn.cs" />
-    <Compile Include="Assets\Scripts\ItemInventory\BlankItem.cs" />
-    <Compile Include="Assets\Scripts\ItemInventory\CharacterWindow.cs" />
-    <Compile Include="Assets\Scripts\ItemInventory\Equipment.cs" />
-    <Compile Include="Assets\Scripts\ItemInventory\EquipmentType.cs" />
-    <Compile Include="Assets\Scripts\ItemInventory\Helmet01.cs" />
-    <Compile Include="Assets\Scripts\ItemInventory\Item01.cs" />
-    <Compile Include="Assets\Scripts\ItemInventory\Items.cs" />
-    <Compile Include="Assets\Scripts\ItemInventory\PlayerInventory.cs" />
-    <Compile Include="Assets\Scripts\ItemInventory\Rarity.cs" />
-    <Compile Include="Assets\Scripts\ItemInventory\SlotEquipmentScript.cs" />
-    <Compile Include="Assets\Scripts\ItemInventory\SlotScript.cs" />
+    <Compile Include="Assets\Scripts\Character\ParticleController.cs" />
+    <Compile Include="Assets\Scripts\Inventory\CharacterWindow.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ETC\BlankItem.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ETC\Item01.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Equipment.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Glove\Pohpae01.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Hat\Helmet01.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Hat\PaperHat.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Hat\StrawHat.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Items.cs" />
+    <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
+    <Compile Include="Assets\Scripts\Inventory\SlotEquipmentScript.cs" />
+    <Compile Include="Assets\Scripts\Inventory\SlotScript.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Suit\Robe01.cs" />
     <Compile Include="Assets\Scripts\MinimapCamera.cs" />
     <Compile Include="Assets\Scripts\System\GameController.cs" />
     <Compile Include="Assets\Scripts\System\GameData.cs" />
