@@ -7,6 +7,7 @@ public class CharacterWindow : MonoBehaviour
     /*
      * Now playerinventory can't access characterwindow.
      * Since dragItem don't have default value/reset value, they need to stay lower then spDragItem in case of priority.
+     * 2017/4/26 : dragItem default value/reset value = -1.
     */
     public GameObject characterMenu, slotPanel, sslot, toolTipPanel, hatSlot, gloveSlot, suitSlot; // inventorySlot, inventoryItem
     public Image itemGhost;
@@ -15,7 +16,7 @@ public class CharacterWindow : MonoBehaviour
 
     public static bool isMouseOver = false, releaseDrag = false, dragging = false, overSpecialSlot = false;
     public static Items currentItem, spDragItem;
-    public static int dragItem, nowOver;
+    public static int dragItem = -1, nowOver;
     public static string putOver = "";
     public PlayerInventory pinv;
 
@@ -24,6 +25,13 @@ public class CharacterWindow : MonoBehaviour
         pinv = GameData.data.inventory;
         currentItem = new BlankItem();
         setEmptySlot();
+
+        hatSlot.GetComponent<SlotEquipmentScript>().item = pinv.hat;
+        hatSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(pinv.hat.names);
+        gloveSlot.GetComponent<SlotEquipmentScript>().item = pinv.glove;
+        gloveSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(pinv.glove.names);
+        suitSlot.GetComponent<SlotEquipmentScript>().item = pinv.suit;
+        suitSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(pinv.suit.names);
     }
 
     void Update()
@@ -40,7 +48,7 @@ public class CharacterWindow : MonoBehaviour
             if (!characterMenu.activeInHierarchy) isMouseOver = false;
         }
 
-        if (isMouseOver && !(currentItem is BlankItem))
+        if (isMouseOver && !(currentItem is BlankItem) && currentItem != null)
         {
             toolTipPanel.SetActive(true);
             toolTipPanel.transform.position = Input.mousePosition + new Vector3(50, -100f, 0f);
@@ -64,14 +72,14 @@ public class CharacterWindow : MonoBehaviour
             itemGhost.enabled = true;
             itemGhost.transform.position = Input.mousePosition + new Vector3(10f, -10f, 0f);
             if (spDragItem != null && !(spDragItem is BlankItem)) itemGhost.sprite = Resources.Load<Sprite>(spDragItem.names); // Drag from equipment
-            else if (spDragItem == null && pinv.pIList[dragItem].names != "blank") itemGhost.sprite = Resources.Load<Sprite>(pinv.pIList[dragItem].names); // Drag fron inventory
+            else if (spDragItem == null && dragItem != -1 && pinv.pIList[dragItem].names != "blank") itemGhost.sprite = Resources.Load<Sprite>(pinv.pIList[dragItem].names); // Drag from inventory
             else itemGhost.enabled = false;
         }
         else itemGhost.enabled = false;
 
         if (releaseDrag)
         {
-            // Unequip(?)
+            // Unequip
             if (spDragItem != null && !spDragItem.names.Equals("blank") && !overSpecialSlot && isMouseOver)
             {
                 Equipment eq = (Equipment)spDragItem;
@@ -82,10 +90,10 @@ public class CharacterWindow : MonoBehaviour
                     if (inBag.equipmentType.Equals(eq.equipmentType)) swapEquipItem(eq);
                 }
                 // Send equipment to empty slot
-                else if(pinv.pIList[nowOver] is BlankItem) swapEquipItem(eq);
+                else if (pinv.pIList[nowOver] is BlankItem) swapEquipItem(eq);
             }
             // Equip / Trash
-            else if (overSpecialSlot)
+            else if (overSpecialSlot && dragItem != -1)
             {
                 if (putOver == "Trash" && spDragItem == null) deleteItem(dragItem); // Delete item(Can't delete current equip item)
                 else if (pinv.pIList[dragItem] is Equipment) // Equip item
@@ -93,21 +101,39 @@ public class CharacterWindow : MonoBehaviour
                     Equipment eq = (Equipment)pinv.pIList[dragItem];
                     if (putOver == eq.equipmentType.ToString())
                     {
-                        if (putOver == EquipmentType.Hat.ToString()) addEquipment(hatSlot, eq, dragItem);
-                        else if (putOver == EquipmentType.Glove.ToString()) addEquipment(gloveSlot, eq, dragItem);
-                        else if (putOver == EquipmentType.Suit.ToString()) addEquipment(suitSlot, eq, dragItem);
+                        switch (eq.equipmentType)
+                        {
+                            case (EquipmentType.Hat):
+                                {
+                                    pinv.hat = eq;
+                                    addEquipment(hatSlot, eq, dragItem);
+                                    break;
+                                }
+
+                            case (EquipmentType.Glove):
+                                {
+                                    pinv.glove = eq;
+                                    addEquipment(gloveSlot, eq, dragItem);
+                                    break;
+                                }
+
+                            case (EquipmentType.Suit):
+                                {
+                                    pinv.suit = eq;
+                                    addEquipment(suitSlot, eq, dragItem);
+                                    break;
+                                }
+                        }
                     }
                 }
             }
             // In inventory only(Swap)
-            else if (dragItem != nowOver)
-            {
-                swapItem(dragItem, nowOver);
-                releaseDrag = false;
-            }
+            else if (dragItem != -1 && dragItem != nowOver) swapItem(dragItem, nowOver);
 
+            dragItem = -1;
             spDragItem = null;
             releaseDrag = false;
+            //putOver = null;
         }
     }
 
@@ -127,13 +153,11 @@ public class CharacterWindow : MonoBehaviour
 
     private void addEquipment(GameObject slot, Equipment eq, int bagIndex)
     {
-        SlotEquipmentScript sl = slot.GetComponent<SlotEquipmentScript>();
-
-        pinv.pIList[bagIndex] = sl.item;
+        pinv.pIList[bagIndex] = slot.GetComponent<SlotEquipmentScript>().item;
         pinv.changeIndex = bagIndex;
 
-        sl.item = eq;
-        sl.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(eq.names);
+        slot.GetComponent<SlotEquipmentScript>().item = eq;
+        slot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(eq.names);
     }
 
     private void swapItem(int swapfrom, int swapto)
@@ -167,18 +191,21 @@ public class CharacterWindow : MonoBehaviour
         switch (eq.equipmentType)
         {
             case (EquipmentType.Hat):
+                pinv.hat = temp;
                 hatSlot.GetComponent<SlotEquipmentScript>().item = temp;
-                hatSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(temp.names);
+                hatSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(pinv.hat.names);
                 break;
 
             case (EquipmentType.Suit):
+                pinv.suit = temp;
                 suitSlot.GetComponent<SlotEquipmentScript>().item = temp;
-                suitSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(temp.names);
+                suitSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(pinv.suit.names);
                 break;
 
             case (EquipmentType.Glove):
+                pinv.glove = temp;
                 gloveSlot.GetComponent<SlotEquipmentScript>().item = temp;
-                gloveSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(temp.names);
+                gloveSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(pinv.glove.names);
                 break;
         }
     }

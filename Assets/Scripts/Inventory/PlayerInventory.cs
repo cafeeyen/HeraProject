@@ -4,13 +4,17 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerInventory
 {
-    public List<Items> pIList; //Player Item List
+    public List<Items> pIList; //Player item list
+    public Items hat, glove, suit; // Player equip item
     public static PlayerInventory inventory;
     public int INVENTORY_SIZE = 20, changeIndex = -1;
 
     public PlayerInventory()
     {
         pIList = new List<Items>();
+        hat = new BlankItem();
+        glove = new BlankItem();
+        suit = new BlankItem();
         createBlankItem();
     }
 

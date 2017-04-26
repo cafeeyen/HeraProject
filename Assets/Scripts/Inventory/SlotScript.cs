@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using System;
 
-public class SlotScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
+public class SlotScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     
 	public Items item;
@@ -20,26 +17,20 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
 	void Update ()
     {
-		if(item != null)
-		{
-			itemImage.name = "image" + slotNumber;
-			itemImage.sprite = Resources.Load<Sprite>(item.names);
-		}
+		if (item != null) itemImage.sprite = Resources.Load<Sprite>(item.names);
 	}
 
-
-	void IPointerClickHandler.OnPointerClick(PointerEventData eventData) { }
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-		CharacterWindow.isMouseOver = true;
-		CharacterWindow.currentItem = item;
-		CharacterWindow.nowOver = slotNumber;
+        CharacterWindow.currentItem = item;
+        CharacterWindow.nowOver = slotNumber;
+        CharacterWindow.isMouseOver = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-		CharacterWindow.isMouseOver = false;
-		CharacterWindow.nowOver = CharacterWindow.dragItem;
+        CharacterWindow.nowOver = CharacterWindow.dragItem;
+        CharacterWindow.isMouseOver = false;
     }
 
 	public void OnPointerDown(PointerEventData eventData)
@@ -49,7 +40,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     }
     public void OnPointerUp(PointerEventData eventData)
     {
-		CharacterWindow.releaseDrag = true;
+        CharacterWindow.releaseDrag = true;
 		CharacterWindow.dragging = false;
     }
 }

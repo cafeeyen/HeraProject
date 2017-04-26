@@ -12,7 +12,6 @@ public class Robe01 :  Equipment
     private string itemDescription = "saiba sanda saida sunda saiba saiba saibaaa aa aa a a a aa a a a";
     private int itemQuantity = 0;
     private bool stack = false;
-    private Sprite iconPic = Resources.Load<Sprite>("robe01");
 
 	public Robe01(int gid)
 	{
@@ -87,12 +86,5 @@ public class Robe01 :  Equipment
         get { return stack; }
 
         set { stack = value; }
-    }
-
-    public Sprite icon
-    {
-        get { return iconPic; }
-
-        set { iconPic = value; }
     }
 }

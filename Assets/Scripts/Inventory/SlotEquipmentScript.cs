@@ -1,31 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using System;
 
-public class SlotEquipmentScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
+public class SlotEquipmentScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
 
     public EquipmentType slotFor;
     public Items item;
     public string slotName = "";
 
-    void Start()
-    {
-        item = new BlankItem();
-    }
-
-    void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
-    {
-    }
-
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        CharacterWindow.isMouseOver = true;
         if (slotFor == EquipmentType.None) CharacterWindow.putOver = slotName;
         else CharacterWindow.putOver = slotFor.ToString();
+
+        CharacterWindow.isMouseOver = true;
         CharacterWindow.currentItem = item;
         CharacterWindow.overSpecialSlot = true;
     }
