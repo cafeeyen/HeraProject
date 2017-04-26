@@ -65,4 +65,14 @@ public class PlayerInventory
     {
         return pIList[pIList.FindIndex(a => a.names == name)];
     }
+
+    public bool isInventoryFull()
+    {
+        foreach(Items i in pIList)
+        {
+            if (i is BlankItem)
+                return false;
+        }
+        return true;
+    }
 }
