@@ -51,7 +51,7 @@ public class CharacterWindow : MonoBehaviour
         if (isMouseOver && !(currentItem is BlankItem) && currentItem != null)
         {
             toolTipPanel.SetActive(true);
-            toolTipPanel.transform.position = Input.mousePosition + new Vector3(50, -100f, 0f);
+            toolTipPanel.transform.position = Input.mousePosition + new Vector3(100, -200f, 0f);
             toolTipItemName.text = currentItem.names;
             toolTipDescription.text = "Description:" + currentItem.description;
             if (currentItem is Equipment)

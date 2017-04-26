@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6E3F3950-7FCD-710D-CB32-E5FA2AF1E7B2}</ProjectGuid>
+    <ProjectGuid>{05E71EE9-F412-62F4-372C-F598AA9CE31C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\AI\CanipalntAIController.cs" />
      <Compile Include="Assets\Scripts\AI\CyclopAIControl.cs" />
      <Compile Include="Assets\Scripts\AI\HarpyAIController.cs" />
+     <Compile Include="Assets\Scripts\AI\NguaAIController.cs" />
      <Compile Include="Assets\Scripts\ActivateTextAtLine.cs" />
      <Compile Include="Assets\Scripts\Camera\MainCameraScript.cs" />
      <Compile Include="Assets\Scripts\Camera\Map02_Camera.cs" />
@@ -61,20 +62,22 @@
      <Compile Include="Assets\Scripts\Character\CollisionCheck.cs" />
      <Compile Include="Assets\Scripts\Character\DieAndRespawn.cs" />
      <Compile Include="Assets\Scripts\Character\ParticleController.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\BlankItem.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\CharacterWindow.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\Equipment.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\EquipmentType.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\Helmet01.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\Item01.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\Items.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\PlayerInventory.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\Pohpae01.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\Rarity.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\Robe01.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\SlotEquipmentScript.cs" />
-     <Compile Include="Assets\Scripts\ItemInventory\SlotScript.cs" />
+     <Compile Include="Assets\Scripts\Inventory\CharacterWindow.cs" />
+     <Compile Include="Assets\Scripts\Inventory\ETC\BlankItem.cs" />
+     <Compile Include="Assets\Scripts\Inventory\ETC\Item01.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Equipment.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Glove\Pohpae01.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Hat\Helmet01.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Hat\PaperHat.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Hat\StrawHat.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Items.cs" />
+     <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
+     <Compile Include="Assets\Scripts\Inventory\SlotEquipmentScript.cs" />
+     <Compile Include="Assets\Scripts\Inventory\SlotScript.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Suit\Robe01.cs" />
      <Compile Include="Assets\Scripts\MinimapCamera.cs" />
+     <Compile Include="Assets\Scripts\System\DamageSystem.cs" />
+     <Compile Include="Assets\Scripts\System\DontDestroyOnLoad.cs" />
      <Compile Include="Assets\Scripts\System\GameController.cs" />
      <Compile Include="Assets\Scripts\System\GameData.cs" />
      <Compile Include="Assets\Scripts\System\LoadScene.cs" />
@@ -113,9 +116,11 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
+     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
@@ -124,6 +129,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
@@ -166,6 +172,7 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
      <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
@@ -192,7 +199,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{FA3735B7-970D-31E5-9141-F7A7B006DA79}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{8D5AE802-0D77-42E7-FA8E-1B43AD7F9283}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
