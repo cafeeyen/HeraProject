@@ -51,7 +51,9 @@
      <Compile Include="Assets\Scripts\AI\CanipalntAIController.cs" />
      <Compile Include="Assets\Scripts\AI\CyclopAIControl.cs" />
      <Compile Include="Assets\Scripts\AI\HarpyAIController.cs" />
+     <Compile Include="Assets\Scripts\AI\HarpyRedAIController.cs" />
      <Compile Include="Assets\Scripts\AI\NguaAIController.cs" />
+     <Compile Include="Assets\Scripts\AI\NguaCollisionDetector.cs" />
      <Compile Include="Assets\Scripts\ActivateTextAtLine.cs" />
      <Compile Include="Assets\Scripts\Camera\MainCameraScript.cs" />
      <Compile Include="Assets\Scripts\Camera\Map02_Camera.cs" />
