@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\AI\CaniTentacleCollisionDetector.cs" />
      <Compile Include="Assets\Scripts\AI\CanipalntAIController.cs" />
      <Compile Include="Assets\Scripts\AI\CyclopAIControl.cs" />
+     <Compile Include="Assets\Scripts\AI\GolemAIController.cs" />
      <Compile Include="Assets\Scripts\AI\HarpyAIController.cs" />
      <Compile Include="Assets\Scripts\AI\HarpyRedAIController.cs" />
      <Compile Include="Assets\Scripts\AI\NguaAIController.cs" />
