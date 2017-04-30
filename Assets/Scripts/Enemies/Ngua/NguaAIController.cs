@@ -8,7 +8,8 @@ public class NguaAIController : MonoBehaviour
     public Collider headCollider, tailCollider, LArmCollider, RArmCollider;
     public static Ngua status;
 
-    public int followRange, attackRange, slapRange = 8, tailRange = 12, dashRange = 25, gravity;
+    public int followRange, slapRange = 8, tailRange = 12, dashRange = 25, gravity;
+    private int currentHitTime, maxHitTime = 40;
     public float moveSpeed, turnSpeed, maxDashTime, slapCooldown = 1.55f, tailCooldown = 3.5f, dashCooldown = 5.5f;
     private float distance, currentSpeed, currentDashTime, slapCooldownCounter, tailCooldownCounter, dashCooldownCounter;
     private bool inRange, isColliding;
@@ -122,11 +123,12 @@ public class NguaAIController : MonoBehaviour
             }
             else if (nguaAction == NguaAction.Slapping)
             {
+                currentHitTime += 1;
                 animator.SetInteger("attackMove", 1);
                 LArmCollider.enabled = true;
                 RArmCollider.enabled = true;
 
-                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Armature|Ngua_attack"))
+                if (currentHitTime > maxHitTime)
                 {
                     animator.SetInteger("attackMove", 0);
                     nguaMoving = NguaMoving.Following;
@@ -134,6 +136,7 @@ public class NguaAIController : MonoBehaviour
                     slapCooldownCounter = Time.time + slapCooldown;
                     LArmCollider.enabled = false;
                     RArmCollider.enabled = false;
+                    currentHitTime = 0;
                 }
             }
         }
@@ -152,6 +155,7 @@ public class NguaAIController : MonoBehaviour
             {
                 nguaAction = NguaAction.Slapping;
                 nguaMoving = NguaMoving.Attacking;
+                currentHitTime = 0;
             }
             else if (distance < tailRange && Time.time > tailCooldownCounter) 
             {
