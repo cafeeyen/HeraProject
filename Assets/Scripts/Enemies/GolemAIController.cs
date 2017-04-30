@@ -9,7 +9,7 @@ public class GolemAIController : MonoBehaviour
     public CharacterController control;
     public GameObject player;
 
-    public int followRange, smashRange = 30, throwRange = 60, gravity;
+    public int followRange, smashRange = 30, throwRange = 60, gravity=1000;
     public float moveSpeed, turnSpeed, smashCooldown = 1.5f, throwCooldown = 3.0f;
     private float distance, currentSpeed, smashCooldownCounter, throwCooldownCounter;
     private int currentSmashTime, maxSmashTime = 70, currentThrowTime, maxThrowTime = 120, stateChanged = 0;

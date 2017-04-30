@@ -7,8 +7,7 @@ public class NguaAIController : MonoBehaviour
 
     private Animator animator;
     public CharacterController control;
-    public GameObject player;
-    public Collider headCollider;
+    public Collider headCollider, tailCollider, LArmCollider, RArmCollider;
 
     public int followRange, attackRange, slapRange = 8, tailRange = 12, dashRange = 25, gravity;
     public float moveSpeed, turnSpeed, maxDashTime, slapCooldown = 1.55f, tailCooldown = 3.5f, dashCooldown = 5.5f;
@@ -19,6 +18,7 @@ public class NguaAIController : MonoBehaviour
     private enum NguaMoving { Neutral, Following, Attacking }
     private NguaAction nguaAction;
     private NguaMoving nguaMoving;
+    private GameObject player;
 
     // Use this for initialization
     void Start()
@@ -30,11 +30,15 @@ public class NguaAIController : MonoBehaviour
         nguaMoving = NguaMoving.Neutral;
         currentSpeed = moveSpeed;
         headCollider.enabled = false;
+        tailCollider.enabled = false;
+        LArmCollider.enabled = false;
+        RArmCollider.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(nguaAction);
         distance = Vector3.Distance(transform.position, player.transform.position);
         inRange = distance < followRange;
         if (inRange)
@@ -103,23 +107,30 @@ public class NguaAIController : MonoBehaviour
             else if (nguaAction == NguaAction.TailAttack)
             {
                 animator.SetInteger("attackMove", 2);
+                tailCollider.enabled = true;
                 if (animator.GetCurrentAnimatorStateInfo(0).IsName("Armature|Ngua_attack3"))
                 {
                     animator.SetInteger("attackMove", 0);
                     nguaMoving = NguaMoving.Following;
                     nguaAction = NguaAction.None;
                     tailCooldownCounter = Time.time + tailCooldown;
+                    tailCollider.enabled = false;
                 }
             }
             else if (nguaAction == NguaAction.Slapping)
             {
                 animator.SetInteger("attackMove", 1);
+                LArmCollider.enabled = true;
+                RArmCollider.enabled = true;
+
                 if (animator.GetCurrentAnimatorStateInfo(0).IsName("Armature|Ngua_attack"))
                 {
                     animator.SetInteger("attackMove", 0);
                     nguaMoving = NguaMoving.Following;
                     nguaAction = NguaAction.None;
                     slapCooldownCounter = Time.time + slapCooldown;
+                    LArmCollider.enabled = false;
+                    RArmCollider.enabled = false;
                 }
             }
         }

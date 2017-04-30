@@ -5,7 +5,7 @@ using System;
 public class GameData
 {
     public static GameData data;
-    public int lv, exp, next, map, itemID, baseHp, baseAtk, baseDef;
+    public int lv, exp, next, map, itemID, baseHp, baseAtk, baseDef, curHp;
     public float posx, posy, posz;
     public PlayerInventory inventory;
 
@@ -16,6 +16,7 @@ public class GameData
         baseAtk = 10;
         baseDef = 4;
         baseHp = 20;
+        curHp = baseHp;
         exp = 0;
         next = 100;
         map = 0;

@@ -4,9 +4,9 @@
 	EquipmentType equipmentType{get;set;}
 
     int id { get; set; }
-    float atk{get;set;}
-	float def{get;set;}
-	float hp{get;set;}
+    int atk{get;set;}
+    int def {get;set;}
+    int hp {get;set;}
 }
 
 public enum Rarity

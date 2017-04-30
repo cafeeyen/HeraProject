@@ -12,10 +12,11 @@ public class PlayerInventory
     public PlayerInventory()
     {
         pIList = new List<Items>();
+        createBlankItem();
+
         hat = new BlankItem();
         glove = new BlankItem();
         suit = new BlankItem();
-        createBlankItem();
     }
 
     public void createBlankItem()
