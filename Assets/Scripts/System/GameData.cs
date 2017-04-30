@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using UnityEngine;
 
 [System.Serializable]
 public class GameData
 {
     public static GameData data;
-    public int lv, exp, next, map, itemID, baseHp, baseAtk, baseDef, curHp;
+    public int lv, exp, next, map, itemID, baseHp, baseAtk, baseDef, curHp, totalHp;
     public float posx, posy, posz;
     public PlayerInventory inventory;
 
@@ -15,8 +15,9 @@ public class GameData
         lv = 1;
         baseAtk = 10;
         baseDef = 4;
-        baseHp = 20;
+        baseHp = 40;
         curHp = baseHp;
+        totalHp = baseHp;
         exp = 0;
         next = 100;
         map = 0;
@@ -24,6 +25,15 @@ public class GameData
         posy = 3;
         posz = 142;
         inventory = PlayerInventory.inventory;
+
+        // For check Player base status each lv.
+        /*
+        for(int i = 1; i <= 20; i++)
+        {
+            Debug.Log("Lv." + lv + " ATK " + baseAtk + " DEF " + baseDef + " HP " + baseHp);
+            LevelUp();
+        }
+        */
     }
 
     public void gainExp(int gain)
@@ -41,7 +51,7 @@ public class GameData
         lv++;
         baseAtk += (int)(lv * 2);
         baseDef += (int)(lv * 1.4f);
-        baseHp += (int)(lv * 5);
+        baseHp += (int)(lv * 10);
         if (lv < 20)
             next = (lv * 100) + (int)(Math.Sqrt(next) * 1.5 * lv);
         else

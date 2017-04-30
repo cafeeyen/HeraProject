@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class NguaAIController : MonoBehaviour
 {
@@ -8,11 +6,13 @@ public class NguaAIController : MonoBehaviour
     private Animator animator;
     public CharacterController control;
     public Collider headCollider, tailCollider, LArmCollider, RArmCollider;
+    public static Ngua status;
 
     public int followRange, attackRange, slapRange = 8, tailRange = 12, dashRange = 25, gravity;
     public float moveSpeed, turnSpeed, maxDashTime, slapCooldown = 1.55f, tailCooldown = 3.5f, dashCooldown = 5.5f;
     private float distance, currentSpeed, currentDashTime, slapCooldownCounter, tailCooldownCounter, dashCooldownCounter;
-    private bool inRange;
+    private bool inRange, isColliding;
+    private string action = "";
     private Vector3 moveVector, playerXZPosition, nguaXZPosition;
     private enum NguaAction { None, Slapping, Dashing, TailAttack }
     private enum NguaMoving { Neutral, Following, Attacking }
@@ -27,6 +27,10 @@ public class NguaAIController : MonoBehaviour
         control = gameObject.GetComponent<CharacterController>();
 
         player = GameObject.FindWithTag("Player");
+        status = new Ngua(1);
+        // For check Ngua status each Lv.
+        //Debug.Log(status.LV + " " + status.ATK + " " + status.DEF + " " + status.CurHP + "/" +status.HP);
+
         nguaMoving = NguaMoving.Neutral;
         currentSpeed = moveSpeed;
         headCollider.enabled = false;
@@ -38,7 +42,6 @@ public class NguaAIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(nguaAction);
         distance = Vector3.Distance(transform.position, player.transform.position);
         inRange = distance < followRange;
         if (inRange)
@@ -73,10 +76,10 @@ public class NguaAIController : MonoBehaviour
                 moveVector = transform.TransformDirection(Vector3.forward) * currentSpeed * Time.deltaTime;
                 currentDashTime += 1;
 
-                if (currentDashTime > maxDashTime || NguaCollisionDetector.isColliding)
+                if (currentDashTime > maxDashTime || isColliding)
                 {
                     animator.SetInteger("dashing", 0);
-                    NguaCollisionDetector.isColliding = false;
+                    isColliding = false;
                     headCollider.enabled = false;
                     currentSpeed -= 40;
                     dashCooldownCounter = Time.time + dashCooldown;
@@ -179,5 +182,25 @@ public class NguaAIController : MonoBehaviour
 
         moveVector.y -= gravity * Time.deltaTime;
         control.Move(moveVector);
+
+        // Attack-Damage Zone
+        if(!action.Equals(""))
+        {
+            Debug.Log(action);
+            DamageSystem.DamageToPlayer(status.ATK, action);
+            action = "";
+        }
+    }
+
+    public bool IsColliding
+    {
+        get { return isColliding; }
+        set { isColliding = value; }
+    }
+
+    public string Action
+    {
+        get { return action; }
+        set { action = value; }
     }
 }

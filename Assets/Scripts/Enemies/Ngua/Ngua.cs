@@ -10,14 +10,14 @@ public class Ngua
     public Ngua(int lv)
     {
         this.lv = lv;
-        atk = (8 * lv) + (lv * lv / 2);
-        def = (2 * lv) + (lv / 2);
-        hp = (6 * lv) + (lv * 3 / 2);
+        atk = lv * 20;
+        def = lv * 4;
+        hp = lv * 24;
         curHp = hp;
         alive = true;
     }
 
-    public int Lv
+    public int LV
     {
         get { return lv; }
     }
@@ -35,6 +35,11 @@ public class Ngua
     public int HP
     {
         get { return hp; }
-        set { hp = value; }
+    }
+
+    public int CurHP
+    {
+        get { return curHp; }
+        set { curHp = value; }
     }
 }

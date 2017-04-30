@@ -2,25 +2,26 @@
 
 public class NguaCollisionDetector : MonoBehaviour
 {
-
-	public static bool isColliding = false;
+    private NguaAIController controller;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
 		{
+            controller = transform.root.GetComponent<NguaAIController>();
+
             if (transform.gameObject.name.Equals("NguaHead"))
             {
-                isColliding = true;
-                Debug.Log("Ouch!" + " " + transform.gameObject.name);
+                controller.IsColliding = true;
+                controller.Action = "Ngua_Head";
             }
-            else if (transform.gameObject.name.Equals("NguaArm"))
+            else if (transform.gameObject.name.Equals("NguaLArm") || transform.gameObject.name.Equals("NguaRArm"))
             {
-                Debug.Log("Ouch!" + " " + transform.gameObject.name);
+                controller.Action = "Ngua_Slap";
             }
             else if (transform.gameObject.name.Equals("NguaTail"))
             {
-                Debug.Log("Ouch!" + " " + transform.gameObject.name);
+                controller.Action = "Ngua_Tail";
             }
         }
     }
@@ -30,7 +31,7 @@ public class NguaCollisionDetector : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
 		{
             if (transform.gameObject.name.Equals("NguaHead"))
-                isColliding = false;
+                controller.IsColliding = false;
         }
     }
 }

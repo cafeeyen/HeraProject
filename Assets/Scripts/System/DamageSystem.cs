@@ -1,20 +1,52 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class DamageController
+public class DamageSystem
 {
-    public void doDamage(GameObject attacker, GameObject defender)
+    private static GameData player = GameData.data;
+
+    public static void DamageToPlayer(int atk, string action)
     {
-        // Attacker (ATK+-20%)*(Buff or Debuff) - (Defender DEF * (Buff or Debuff))
-        // Show Dmg in Defender side
-        // Decrease Defender HP
-        // If Defender HP 0 -> Dead
-        //  -> If Attacker is Player --> gainExp() and dropItem()
-        //  -> Else Gameover
+        // Multiply Dmg for each Action
+        switch(action)
+        {
+            // Ngua
+            case ("Ngua_Head"): atk = (int)(atk * 1.2);break;
+            case ("Ngua_Slap"): atk = (int)(atk * 0.8); break;
+            case ("Ngua_Tail"): atk = (int)(atk * 1); break;
+
+                // Cyclop
+                // Harpy(Black)
+                // Harpy(Red)
+        }
+
+        // Calculate def in player side
+        int def = player.baseDef;
+        if (!(player.inventory.hat is BlankItem))
+        {
+            Equipment hat = (Equipment)player.inventory.hat;
+            def += hat.def;
+        }
+        if (!(player.inventory.glove is BlankItem))
+        {
+            Equipment glove = (Equipment)player.inventory.glove;
+            def += glove.def;
+        }
+        if (!(player.inventory.suit is BlankItem))
+        {
+            Equipment suit = (Equipment)player.inventory.suit;
+            def += suit.def;
+        }
+
+        // Decrease Player HP
+        player.curHp -= Mathf.Max(0, atk - def);
+        Debug.Log("ATK " + atk + " - DEF " + def + " : " + player.curHp + "/" + player.totalHp);
+
+        // If Player HP <= 0 ---> Dead
+        if (player.curHp <= 0)
+            Debug.Log("Bye~");
     }
 
-    public void dropItem()
+    public static void dropItem()
     {
         // Random item type
         // If not potion -> Item base on level -> Random rare -> Random stat

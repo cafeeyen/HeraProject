@@ -19,6 +19,7 @@ public class CharacterWindow : MonoBehaviour
     public static int dragItem = -1, nowOver;
     public static string putOver = "";
     public PlayerInventory pinv;
+    private static GameData data = GameData.data;
 
     void Start()
     {
@@ -133,7 +134,6 @@ public class CharacterWindow : MonoBehaviour
             dragItem = -1;
             spDragItem = null;
             releaseDrag = false;
-            //putOver = null;
         }
     }
 
@@ -153,6 +153,8 @@ public class CharacterWindow : MonoBehaviour
 
     private void addEquipment(GameObject slot, Equipment eq, int bagIndex)
     {
+        data.totalHp += eq.hp;
+
         pinv.pIList[bagIndex] = slot.GetComponent<SlotEquipmentScript>().item;
         pinv.changeIndex = bagIndex;
 
@@ -185,6 +187,7 @@ public class CharacterWindow : MonoBehaviour
 
     private void swapEquipItem(Equipment eq)
     {
+        // Eq to Inv
         Items temp = pinv.pIList[nowOver];
         pinv.pIList[nowOver] = eq;
         pinv.changeIndex = nowOver;
@@ -208,5 +211,21 @@ public class CharacterWindow : MonoBehaviour
                 gloveSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(pinv.glove.names);
                 break;
         }
+
+        //Calculate new Hp for player
+        int hp = eq.hp;
+        if (!(temp is BlankItem))
+        {
+            Equipment newEq = (Equipment)temp;
+            // Old > New
+            if (eq.hp > newEq.hp) data.totalHp -= (eq.hp - newEq.hp);
+            // New > Old
+            else data.totalHp += (newEq.hp - eq.hp);
+        }
+        // Sent to empty
+        else data.totalHp -= eq.hp;
+
+        //Recalculate curHp
+        data.curHp = Mathf.Min(data.curHp, data.totalHp);
     }
 }
