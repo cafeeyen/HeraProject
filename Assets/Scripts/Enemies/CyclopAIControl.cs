@@ -37,7 +37,6 @@ public class CyclopAIControl : MonoBehaviour {
 		float distance = Vector3.Distance(transform.position, player.transform.position);
 		inRange = distance < followRange;
 
-		Debug.Log(cyclopMoving + " " + cyclopAction);
 		if(inRange)
 		{
 			if(distance < 4 && cyclopMoving != CyclopMoving.Attacking)
@@ -58,7 +57,6 @@ public class CyclopAIControl : MonoBehaviour {
 		{
 			if(cyclopAction == CyclopAction.Dashing)
 			{
-				Debug.Log(currentDashTime + ":" + maxDashTime);
 				moveVector = transform.TransformDirection(Vector3.forward) * currentSpeed * Time.deltaTime;
 				animator.SetInteger("attacking", 2);
 				currentDashTime += 1;
@@ -72,7 +70,6 @@ public class CyclopAIControl : MonoBehaviour {
 			}
 			else if(cyclopAction == CyclopAction.Hitting)
 			{
-				Debug.Log(currentHitTime + ":" + maxHitTime);
 				animator.SetInteger("hitting", 1);
 				moveVector = Vector3.zero;
 				currentHitTime += 1;
@@ -122,67 +119,6 @@ public class CyclopAIControl : MonoBehaviour {
 					cyclopMoving = CyclopMoving.Attacking;
 				}
 		}
-
-		//Debug.Log(animator.GetInteger("attacking") + " " + animator.GetInteger("hitting") );
-
-		// if(cyclopAction == CyclopAction.Neutral && inRange && distance > hitRange){
-		// 	animator.SetInteger("attacking", 1);
-		// 	cyclopAction = CyclopAction.Attacking;
-		// }
-		
-		// if(inRange){
-			
-		// 	if(cyclopAction == CyclopAction.Hitting){
-		// 		animator.SetInteger("hitting", 1);
-		// 		moveVector = Vector3.zero;
-		// 		currentHitTime += 1;
-		// 		if(currentHitTime > maxHitTime){
-		// 			currentHitTime = 0;
-		// 			animator.SetInteger("hitting", 0);
-		// 			animator.SetInteger("attacking", 0);
-		// 			cyclopAction = CyclopAction.Neutral;
-		// 		}
-		// 	}
-		// 	else if(cyclopAction == CyclopAction.Dashing){
-		// 		moveVector = transform.TransformDirection(Vector3.forward) * currentSpeed * Time.deltaTime;
-		// 		animator.SetInteger("attacking", 2);
-		// 		currentDashTime += 1;
-		// 		if(currentDashTime > maxDashTime){ //|| isColliding
-		// 			currentDashTime = 0;
-		// 			currentSpeed -= 30;
-		// 			cyclopAction = CyclopAction.Attacking;
-		// 			skillCoolDownCounter = Time.time + skillCoolDown;
-		// 		}
-		// 	}
-		// 	else if(cyclopAction == CyclopAction.Attacking){
-		// 		animator.SetInteger("attacking", 1);
-		// 		moveVector = transform.TransformDirection(Vector3.forward) * currentSpeed * Time.deltaTime;
-		// 		monsterRotation = new Vector3(transform.position.x, 0, transform.position.z);
-		// 		playerRotation = new Vector3(player.transform.position.x, 0, player.transform.position.z);
-		// 		transform.rotation = Quaternion.Slerp(transform.rotation, 
-		// 			Quaternion.LookRotation(playerRotation - monsterRotation), turnSpeed * Time.deltaTime);
-		// 		if(distance < 1){ //in normal mode, very near cant walk
-		// 			moveVector = Vector3.zero;
-		// 		}
-		// 		if(distance < hitRange && Time.time > hitCoolDownCounter && Time.time > skillCoolDownCounter){
-		// 			hitCoolDownCounter = Time.time + hitCoolDown;
-		// 			currentHitTime = 0;
-		// 			cyclopAction = CyclopAction.Hitting;
-		// 		}
-		// 		else if(distance < dashRange && Time.time > dashCoolDownCounter && Time.time > skillCoolDownCounter){
-		// 			dashCoolDownCounter = Time.time + dashCoolDown;
-		// 			currentSpeed += 30;
-		// 			currentDashTime = 0;
-		// 			cyclopAction = CyclopAction.Dashing;
-		// 		}
-		// 	}			
-		// }
-		// else if(!inRange){
-		// 	animator.SetInteger("attacking", 0);
-		// 	currentSpeed = moveSpeed;
-		// 	cyclopAction = CyclopAction.Neutral;
-		// 	moveVector = Vector3.zero;
-		// }
 		moveVector.y -= gravity * Time.deltaTime;
 		control.Move(moveVector);
 	}

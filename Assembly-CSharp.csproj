@@ -55,6 +55,8 @@
      <Compile Include="Assets\Scripts\Character\CharacterControl.cs" />
      <Compile Include="Assets\Scripts\Character\CollisionCheck.cs" />
      <Compile Include="Assets\Scripts\Character\DieAndRespawn.cs" />
+     <Compile Include="Assets\Scripts\Character\GroundDetector.cs" />
+     <Compile Include="Assets\Scripts\Character\HeraControl.cs" />
      <Compile Include="Assets\Scripts\Character\ParticleController.cs" />
      <Compile Include="Assets\Scripts\Enemies\CaniHeadCollisionDetector.cs" />
      <Compile Include="Assets\Scripts\Enemies\CaniTentacleCollisionDetector.cs" />

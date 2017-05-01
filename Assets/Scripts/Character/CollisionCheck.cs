@@ -3,7 +3,7 @@
 public class CollisionCheck : MonoBehaviour
 {
     private DieAndRespawn dieAndRespawn;
-    private CharacterControl cc;
+    private HeraControl cc;
     private ParticleController par;
     private PlayerInventory inventory;
 
@@ -11,7 +11,7 @@ public class CollisionCheck : MonoBehaviour
     void Start()
     {
         dieAndRespawn = gameObject.GetComponent<DieAndRespawn>();
-        cc = gameObject.GetComponent<CharacterControl>();
+        cc = gameObject.GetComponent<HeraControl>();
         par = gameObject.GetComponent<ParticleController>();
         inventory = GameData.data.inventory;
 

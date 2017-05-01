@@ -1,0 +1,604 @@
+fileFormatVersion: 2
+guid: 8eaefc81188e5894bb91923323e4059b
+timeCreated: 1493643223
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: asscessory
+    100004: Body
+    100006: body.001
+    100008: Bone
+    100010: Bone.001
+    100012: Bone.002
+    100014: Bone.003
+    100016: Bone.004
+    100018: Bone.005
+    100020: Bone.006
+    100022: Bone.007
+    100024: Bone.008
+    100026: Bone.008_end
+    100028: Bone.009
+    100030: Bone.009_end
+    100032: Bone.010
+    100034: Bone.010_end
+    100036: Bone.012
+    100038: Bone.013
+    100040: Bone.014
+    100042: Bone.015
+    100044: Bone.016
+    100046: Bone.016_end
+    100048: Bone.017
+    100050: Bone.017_end
+    100052: bracelet1
+    100054: bracelet2
+    100056: bracelet3
+    100058: bracelet4
+    100060: Camera
+    100062: //RootNode
+    100064: clown
+    100066: Face
+    100068: Hair
+    100070: Learring
+    100072: Point
+    100074: Ponytail
+    100076: Ponytail2
+    100078: Rearring
+    400000: Armature
+    400002: asscessory
+    400004: Body
+    400006: body.001
+    400008: Bone
+    400010: Bone.001
+    400012: Bone.002
+    400014: Bone.003
+    400016: Bone.004
+    400018: Bone.005
+    400020: Bone.006
+    400022: Bone.007
+    400024: Bone.008
+    400026: Bone.008_end
+    400028: Bone.009
+    400030: Bone.009_end
+    400032: Bone.010
+    400034: Bone.010_end
+    400036: Bone.012
+    400038: Bone.013
+    400040: Bone.014
+    400042: Bone.015
+    400044: Bone.016
+    400046: Bone.016_end
+    400048: Bone.017
+    400050: Bone.017_end
+    400052: bracelet1
+    400054: bracelet2
+    400056: bracelet3
+    400058: bracelet4
+    400060: Camera
+    400062: //RootNode
+    400064: clown
+    400066: Face
+    400068: Hair
+    400070: Learring
+    400072: Point
+    400074: Ponytail
+    400076: Ponytail2
+    400078: Rearring
+    4300000: Face
+    4300002: Hair
+    4300004: clown
+    4300006: Ponytail2
+    4300008: Ponytail
+    4300010: Rearring
+    4300012: Learring
+    4300014: Body
+    4300016: bracelet3
+    4300018: bracelet4
+    4300020: bracelet2
+    4300022: bracelet1
+    4300024: body.001
+    4300026: asscessory
+    7400000: Armature|Mia_combo1
+    7400002: Armature|Mia_combo2
+    7400004: Armature|Mia_combo3
+    7400006: Armature|Mia_combo4
+    7400008: Armature|Mia_combo5
+    7400010: Armature|Mia_death
+    7400012: Armature|Mia_hit
+    7400014: Armature|Mia_idle
+    7400016: Armature|Mia_jump
+    7400018: Armature|Mia_kick
+    7400020: Armature|Mia_levelup
+    7400022: Armature|Mia_run
+    7400024: Armature|Mia_shoot
+    9500000: //RootNode
+    13700000: asscessory
+    13700002: Body
+    13700004: body.001
+    13700006: bracelet1
+    13700008: bracelet2
+    13700010: bracelet3
+    13700012: bracelet4
+    13700014: clown
+    13700016: Face
+    13700018: Hair
+    13700020: Learring
+    13700022: Ponytail
+    13700024: Ponytail2
+    13700026: Rearring
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Armature|Mia_combo1' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Bone' has translation animation that will
+      be discarded.\n\t'Bone.003' has translation animation that will be discarded.\n\t'Bone.003'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Bone.004'
+      has translation animation that will be discarded.\n\t'Bone.004' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Mia_combo2' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone.003'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Bone.004'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Mia_combo3' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone'
+      has translation animation that will be discarded.\n\t'Bone.003' has translation
+      animation that will be discarded.\n\t'Bone.003' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Bone.004' has translation
+      animation that will be discarded.\n\t'Bone.004' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Armature|Mia_combo4'
+      has import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'Bone' has translation
+      animation that will be discarded.\n\t'Bone.003' has translation animation that
+      will be discarded.\n\t'Bone.003' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Bone.004' has translation animation that
+      will be discarded.\n\t'Bone.004' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\nClip 'Armature|Mia_combo5' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation DOF
+      on avatar to improve retargeting quality.\n\t'Bone' has translation animation
+      that will be discarded.\n\t'Bone.003' has translation animation that will be
+      discarded.\n\t'Bone.003' is inbetween humanoid transforms and has rotation animation
+      that will be discarded.\n\t'Bone.004' has translation animation that will be
+      discarded.\n\t'Bone.004' is inbetween humanoid transforms and has rotation animation
+      that will be discarded.\n\nClip 'Armature|Mia_death' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Bone' has translation animation that will
+      be discarded.\n\t'Bone.003' has translation animation that will be discarded.\n\t'Bone.003'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Bone.004'
+      has translation animation that will be discarded.\n\t'Bone.004' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Mia_idle' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone'
+      has translation animation that will be discarded.\n\t'Bone.003' has translation
+      animation that will be discarded.\n\t'Bone.004' has translation animation that
+      will be discarded.\n\nClip 'Armature|Mia_jump' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Bone' has translation animation that will
+      be discarded.\n\t'Bone.003' has translation animation that will be discarded.\n\t'Bone.004'
+      has translation animation that will be discarded.\n\nClip 'Armature|Mia_kick'
+      has import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'Bone.003' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Bone.004'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Mia_levelup' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone'
+      has translation animation that will be discarded.\n\t'Bone.003' has translation
+      animation that will be discarded.\n\t'Bone.004' has translation animation that
+      will be discarded.\n\nClip 'Armature|Mia_run' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Bone' has translation animation that will
+      be discarded.\n\t'Bone.003' has translation animation that will be discarded.\n\t'Bone.004'
+      has translation animation that will be discarded.\n\nClip 'Armature|Mia_shoot'
+      has import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'Bone.003' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Bone.004'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Armature
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.012
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.013
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.014
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.015
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.016
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.017
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.001
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.002
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.005
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.006
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.007
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.008
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.009
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.010
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.009_end
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.008_end
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: ChibiNew_testRigging(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: 0.00000020861626, y: -3.1478353, z: 0.0000009536743}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Bone
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0.06817718}
+      rotation: {x: 0.7071068, y: 0.000000005619111, z: 0.000000005619118, w: 0.7071067}
+      scale: {x: 1, y: 0.99999607, z: 0.99999607}
+    - name: Bone.001
+      parentName: Bone
+      position: {x: -0, y: 0.014759764, z: 0}
+      rotation: {x: -0, y: -0, z: 4.440892e-16, w: 1}
+      scale: {x: 1, y: 0.99999964, z: 0.99999964}
+    - name: Bone.002
+      parentName: Bone.001
+      position: {x: -0, y: 0.011761407, z: 0}
+      rotation: {x: -0.50433123, y: 0.49803603, z: 0.52932006, w: 0.46629444}
+      scale: {x: 1.0000091, y: 1.0000085, z: 1.0000067}
+    - name: Bone.006
+      parentName: Bone.002
+      position: {x: -1.11758706e-10, y: 0.0107872365, z: 0.0000000028833165}
+      rotation: {x: 0.04747221, y: -0.0038686097, z: -0.022449076, w: 0.9986128}
+      scale: {x: 1.000009, y: 1.0000043, z: 1.0000099}
+    - name: Bone.008
+      parentName: Bone.006
+      position: {x: 0.0000000020861626, y: 0.012448968, z: 0.000000012982636}
+      rotation: {x: 0.018146863, y: 0.00075506617, z: 0.017210029, w: 0.9996869}
+      scale: {x: 1.0000018, y: 1.0000011, z: 0.9999988}
+    - name: Bone.008_end
+      parentName: Bone.008
+      position: {x: -0, y: 0.013525056, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.005
+      parentName: Bone.001
+      position: {x: -0, y: 0.011761407, z: 0}
+      rotation: {x: 0.50433123, y: 0.49803594, z: 0.52932006, w: -0.46629447}
+      scale: {x: 1.0000046, y: 1.0000017, z: 1.0000035}
+    - name: Bone.007
+      parentName: Bone.005
+      position: {x: 1.11758706e-10, y: 0.0107872365, z: 0.0000000028833165}
+      rotation: {x: -0.047472272, y: -0.003868595, z: -0.022448989, w: -0.9986128}
+      scale: {x: 1.0000023, y: 1.0000031, z: 1.0000058}
+    - name: Bone.009
+      parentName: Bone.007
+      position: {x: 5.9604643e-10, y: 0.012448967, z: 6.1467287e-10}
+      rotation: {x: 0.01814677, y: -0.0007550315, z: -0.017209975, w: 0.9996869}
+      scale: {x: 1.0000031, y: 0.9999994, z: 0.9999984}
+    - name: Bone.009_end
+      parentName: Bone.009
+      position: {x: -0, y: 0.013525056, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.010
+      parentName: Bone.001
+      position: {x: -0, y: 0.011761407, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1.0000005, z: 1.0000005}
+    - name: Bone.010_end
+      parentName: Bone.010
+      position: {x: -0, y: 0.06662048, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.003
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0.06817718}
+      rotation: {x: 0.00000005960465, y: -0.00000005960465, z: 0.7071068, w: 0.7071068}
+      scale: {x: 0.9999992, y: 1.0000021, z: 0.99999696}
+    - name: Bone.012
+      parentName: Bone.003
+      position: {x: -0, y: 0.01, z: 0}
+      rotation: {x: 0.4837494, y: -0.5157388, z: 0.48374948, w: -0.5157387}
+      scale: {x: 0.99999577, y: 0.99999785, z: 0.99999607}
+    - name: Bone.014
+      parentName: Bone.012
+      position: {x: -0, y: 0.016820055, z: 1.4210854e-16}
+      rotation: {x: 0.0652466, y: -0.0008468032, z: -0.012948781, w: 0.9977848}
+      scale: {x: 1.0000015, y: 1.0000044, z: 1.0000008}
+    - name: Bone.016
+      parentName: Bone.014
+      position: {x: -3.518045e-10, y: 0.01760074, z: 2.3283063e-11}
+      rotation: {x: 0.000519732, y: 0.6710555, z: -0.7408498, w: -0.028740281}
+      scale: {x: 1.0000242, y: 1.000014, z: 1.0000099}
+    - name: Bone.016_end
+      parentName: Bone.016
+      position: {x: -0, y: 0.0058133025, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.004
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0.06817718}
+      rotation: {x: 0.00000005960465, y: 0.00000005960465, z: -0.7071068, w: 0.7071068}
+      scale: {x: 0.9999992, y: 1.0000017, z: 0.99999696}
+    - name: Bone.013
+      parentName: Bone.004
+      position: {x: -0, y: 0.01, z: 0}
+      rotation: {x: 0.4837494, y: 0.5157388, z: -0.4837495, w: -0.5157387}
+      scale: {x: 0.9999972, y: 1.0000067, z: 1.0000026}
+    - name: Bone.015
+      parentName: Bone.013
+      position: {x: -0, y: 0.016820055, z: -7.105427e-17}
+      rotation: {x: 0.0652466, y: 0.0008467734, z: 0.012948737, w: 0.9977848}
+      scale: {x: 1.0000029, y: 1.0000044, z: 1.0000012}
+    - name: Bone.017
+      parentName: Bone.015
+      position: {x: -8.4028834e-10, y: 0.017600743, z: -1.3038516e-10}
+      rotation: {x: -0.028449884, y: 0.67044747, z: -0.74140006, w: -0.00411069}
+      scale: {x: 1.0000222, y: 1.0000103, z: 1.0000046}
+    - name: Bone.017_end
+      parentName: Bone.017
+      position: {x: -0, y: 0.0058133025, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: asscessory
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: 1.5107826, y: -0.08326769, z: 1.8708978}
+      rotation: {x: -0.487659, y: -0.03933258, z: -0.4411386, w: 0.7523552}
+      scale: {x: 100, y: 99.99999, z: 100}
+    - name: Body
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: -2.581504, y: 1.2321739, z: 0.7200493}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: body.001
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: 0.31181806, y: -1.2442596, z: -0.20756483}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: bracelet1
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: 2.4656372, y: -0.3870802, z: 1.0908438}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: bracelet2
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: -2.6569643, y: -0.3238654, z: 1.0835615}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: bracelet3
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: 3.5991914, y: -0.34854078, z: 1.0908438}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: bracelet4
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: 3.4603777, y: -0.34854078, z: 1.0908438}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Camera
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: -7.4811316, y: 5.343665, z: 6.5076394}
+      rotation: {x: 0.21255729, y: 0.904797, z: -0.084389366, w: -0.35922173}
+      scale: {x: 100, y: 100.00001, z: 99.99999}
+    - name: clown
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: -2.581504, y: 1.2321739, z: 0.7200493}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Face
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: -2.581504, y: 1.2321739, z: 0.7200493}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Hair
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: -2.581504, y: 1.2321739, z: 0.7200493}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Learring
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: -2.581504, y: 1.2321739, z: 0.7200493}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Point
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: 0.2151042, y: 19.241882, z: 5.931195}
+      rotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Ponytail
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: -2.581504, y: 1.2321739, z: 0.7200493}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Ponytail2
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: -2.581504, y: 1.2321739, z: 0.7200493}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Rearring
+      parentName: ChibiNew_testRigging(Clone)
+      position: {x: -2.581504, y: 1.2321739, z: 0.7200493}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

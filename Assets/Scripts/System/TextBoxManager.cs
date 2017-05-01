@@ -11,7 +11,7 @@ public class TextBoxManager : MonoBehaviour {
 
 	public int currentLine, endAtLine;
 	public bool isTextboxActive;
-	public CharacterControl player;
+	public HeraControl player;
 	
 
 	// Use this for initialization
