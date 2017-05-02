@@ -10,9 +10,9 @@ public class Ngua
     public Ngua(int lv)
     {
         this.lv = lv;
-        atk = lv * 20;
-        def = lv * 4;
-        hp = lv * 24;
+        atk = (int)(lv * 36); // Max 720
+        def = (int)(lv * 16); // Max 320
+        hp = (int)(lv * 40); // Max 800
         curHp = hp;
         alive = true;
     }
