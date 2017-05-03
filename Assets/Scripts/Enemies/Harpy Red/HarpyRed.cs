@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
 public class HarpyRed
 {
@@ -10,9 +8,9 @@ public class HarpyRed
     public HarpyRed(int lv)
     {
         this.lv = lv;
-        atk = (int)(lv * 42.5); // Max 850
-        def = (int)(lv * 10); // Max 200
-        hp = (int)(lv * 27.5); // Max 550
+        atk = 850 - (int)(Math.Log(21 - lv, 2.8) * 850 / 3);
+        def = 200 - (int)(Math.Log(21 - lv, 2.8) * 200 / 3);
+        hp = 550 - (int)(Math.Log(21 - lv, 2.8) * 550 / 3);
         curHp = hp;
         alive = true;
     }
@@ -43,3 +41,28 @@ public class HarpyRed
         set { curHp = value; }
     }
 }
+
+/*
+Harpy Red
+LV	ATK	DEF	HP
+1	26	7	17
+2	40	10	26
+3	55	13	36
+4	71	17	46
+5	88	21	57
+6	105	25	68
+7	124	30	81
+8	145	34	94
+9	167	40	108
+10	191	45	124
+11	217	51	141
+12	246	58	159
+13	278	66	180
+14	315	75	204
+15	357	84	231
+16	408	96	264
+17	469	111	304
+18	548	129	355
+19	660	156	427
+20	850	200	550
+*/
