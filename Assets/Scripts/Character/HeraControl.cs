@@ -11,9 +11,9 @@ public class HeraControl : MonoBehaviour
 
     private Animator anim;
     private Vector3 moveDirection = Vector3.zero;
-    private float oldY = 0.0f;
+    private float oldY = 0.0f, moveCooldown = 0.5f, moveCooldownCounter;
     private int jumpStep = 2, kicktime = 0, maxKickTime = 40, slapTime = 0, maxSlapTime = 20;
-    private int comboMove = 0, comboTime = 0, maxcomboTime = 30;
+    private int comboMove = 0, comboTime = 0, maxcomboTime = 25;
     private bool isGround, takeNextCombo = false;
 
     private enum HeraAction { Standing, Walking, Comboing, Kicking, Slaping }
@@ -47,20 +47,21 @@ public class HeraControl : MonoBehaviour
 
 
         //=== Check key ===
-        if(Input.GetKeyDown(KeyCode.Keypad0) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking) && isGround)
+        if(Input.GetKeyDown(KeyCode.Keypad0) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking) 
+            && isGround && Time.time > moveCooldownCounter)
         {
             oldAction = heraAction;
             heraAction = HeraAction.Comboing;
             comboTime = 0;
             comboMove = 1;
         }
-        else if(Input.GetKeyDown(KeyCode.Keypad2) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking))
+        else if(Input.GetKeyDown(KeyCode.Keypad2) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking) && Time.time > moveCooldownCounter)
         {
             oldAction = heraAction;
             heraAction = HeraAction.Slaping;
             slapTime = 0;
         }
-        else if(Input.GetKeyDown(KeyCode.Keypad1) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking))
+        else if(Input.GetKeyDown(KeyCode.Keypad1) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking) && Time.time > moveCooldownCounter)
         {
             oldAction = heraAction;
             heraAction = HeraAction.Kicking;
@@ -78,32 +79,31 @@ public class HeraControl : MonoBehaviour
         }
         
         
-
+        
 
         if (heraAction == HeraAction.Standing)
         {
             anim.SetInteger("Moving", 0);
             moveDirection.x = 0;
             moveDirection.z = 0;
+            if (isGround)
+            {
+                jumpStep = 2;
+                anim.SetInteger("Jumping", 0);
+            }
 
             //Jump control
+            if (Time.deltaTime - characterController.transform.position.y >= oldY)
+            {
+                anim.SetInteger("Jumping", 3);
+            }
             if (Input.GetKeyDown("space") && jumpStep > 0)
             {
                 jumpStep--;
                 moveDirection.y = jumpForce;
                 anim.SetInteger("Jumping", 1);
             }
-            if (Time.deltaTime - characterController.transform.position.y >= oldY)
-            {
-                anim.SetInteger("Jumping", 3);
-            }
-            else if (isGround)
-            {
-                anim.SetInteger("Jumping", 0);
-            }
-
-
-            //check move / attck
+            
         }
 
         else if (heraAction == HeraAction.Walking)
@@ -133,6 +133,7 @@ public class HeraControl : MonoBehaviour
             else if(isGround)
             {
                 jumpStep = 2;
+                anim.SetInteger("Jumping", 0);
 
                 Vector3 forward = Camera.main.transform.TransformDirection(Vector3.forward);
                 forward.y = 0;
@@ -155,11 +156,6 @@ public class HeraControl : MonoBehaviour
                 moveDirection.y = jumpForce;
                 anim.SetInteger("Jumping", 1);
             }
-            else if (isGround)
-            {
-                anim.SetInteger("Jumping", 0);
-            }
-            //check attck / upkey
         }
 
         else if (heraAction == HeraAction.Comboing)
@@ -171,33 +167,33 @@ public class HeraControl : MonoBehaviour
             {
                 comboTime = 0;
                 heraAction = oldAction;
-                Debug.Log("--EndCombo " + anim.GetInteger("ComboAttack") + " " + heraAction );
                 anim.SetInteger("ComboAttack", 0);
+                moveCooldownCounter = Time.time + moveCooldown;
             }
-            else if(comboMove == 6) //if action to pre end state will stand for 1/4 max time
+            else if(comboMove == 6) //if action to pre end state will stand for 2 frame for transition
             {
                 anim.SetInteger("ComboAttack", 6);
-                if(comboTime < (maxcomboTime/4))
+                if(comboTime > 2)
                 {
                     comboMove = 7;
                 }
             }
-            else if(comboTime >= maxcomboTime) //call when end each move
+            else if(comboTime >= maxcomboTime && comboMove < 7) //call when end each move
             {
                 comboTime = 0;
                 if(takeNextCombo && comboMove < 6){comboMove += 1;}
-                else{comboMove = 6; }
-                Debug.Log("takeNextCombo " + takeNextCombo);
+                else{comboMove = 6; comboTime = 0;}
             }
             else if(comboTime < maxcomboTime && comboMove < 7) //for give action 1-6  And action not end that time
-            {
+            {          
                 anim.SetInteger("ComboAttack", comboMove);
                 if(comboMove == 3){moveDirection.y = jumpForce/2;}
                 if(comboMove == 4){moveDirection.y -= gravity *2 * Time.deltaTime;}
             }
-            if(comboTime < (maxcomboTime/2)){takeNextCombo = false;}
-            else if(Input.GetKeyDown(KeyCode.Keypad0) && comboMove < 5){takeNextCombo = true;}
-            
+            //get next combo
+            if(comboTime < (maxcomboTime/2) && comboMove < 7){takeNextCombo = false;}
+            else if(Input.GetKeyDown(KeyCode.Keypad0) && !takeNextCombo && comboMove < 5){takeNextCombo = true;}
+
         }
 
         else if (heraAction == HeraAction.Kicking)

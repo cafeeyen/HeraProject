@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5304C0ED-20F9-6011-98B0-F093BA6C68BF}</ProjectGuid>
+    <ProjectGuid>{9519E6AE-6D0B-1D5F-1F22-DD68948B3B63}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,24 +47,30 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ActivateTextAtLine.cs" />
-     <Compile Include="Assets\Scripts\Camera\MainCameraScript.cs" />
-     <Compile Include="Assets\Scripts\Camera\Map02_Camera.cs" />
-     <Compile Include="Assets\Scripts\Camera\Map03_Camera.cs" />
-     <Compile Include="Assets\Scripts\Camera\Map05_Camera.cs" />
-     <Compile Include="Assets\Scripts\Camera\Map06_Camera.cs" />
+     <Compile Include="Assets\Scripts\Cameras\MainCameraScript.cs" />
+     <Compile Include="Assets\Scripts\Cameras\Map02_Camera.cs" />
+     <Compile Include="Assets\Scripts\Cameras\Map03_Camera.cs" />
+     <Compile Include="Assets\Scripts\Cameras\Map05_Camera.cs" />
+     <Compile Include="Assets\Scripts\Cameras\Map06_Camera.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterControl.cs" />
      <Compile Include="Assets\Scripts\Character\CollisionCheck.cs" />
      <Compile Include="Assets\Scripts\Character\DieAndRespawn.cs" />
      <Compile Include="Assets\Scripts\Character\GroundDetector.cs" />
+     <Compile Include="Assets\Scripts\Character\HeraCollisionDetector.cs" />
      <Compile Include="Assets\Scripts\Character\HeraControl.cs" />
      <Compile Include="Assets\Scripts\Character\ParticleController.cs" />
-     <Compile Include="Assets\Scripts\Enemies\CaniHeadCollisionDetector.cs" />
-     <Compile Include="Assets\Scripts\Enemies\CaniTentacleCollisionDetector.cs" />
-     <Compile Include="Assets\Scripts\Enemies\CanipalntAIController.cs" />
-     <Compile Include="Assets\Scripts\Enemies\CyclopAIControl.cs" />
-     <Compile Include="Assets\Scripts\Enemies\GolemAIController.cs" />
-     <Compile Include="Assets\Scripts\Enemies\HarpyAIController.cs" />
-     <Compile Include="Assets\Scripts\Enemies\HarpyRedAIController.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Cani\Cani.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Cani\CaniHeadCollisionDetector.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Cani\CaniTentacleCollisionDetector.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Cani\CanipalntAIController.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Cyclop\Cyclop.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Cyclop\CyclopAIControl.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Golem\Golem.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Golem\GolemAIController.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Harpy Red\HarpyRed.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Harpy Red\HarpyRedAIController.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Harpy\Harpy.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Harpy\HarpyAIController.cs" />
      <Compile Include="Assets\Scripts\Enemies\Ngua\Ngua.cs" />
      <Compile Include="Assets\Scripts\Enemies\Ngua\NguaAIController.cs" />
      <Compile Include="Assets\Scripts\Enemies\Ngua\NguaCollisionDetector.cs" />
@@ -205,7 +211,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{8A147CEC-8DE1-BCD1-645A-808413A850F8}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{9AF9037E-4414-AD3E-E6C2-44F09F468A55}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
