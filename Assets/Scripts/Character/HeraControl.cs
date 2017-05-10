@@ -43,8 +43,6 @@ public class HeraControl : MonoBehaviour
         else if (Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, 0f));
         else if (Input.GetKey("right")) getRotation(new Vector3(1f, 0f, 0f));
 
-        //Debug.Log("Down:" +Input.GetKeyDown(KeyCode.Keypad0) + "  Press:" +Input.GetKey(KeyCode.Keypad0) + "  Up:" +Input.GetKeyUp(KeyCode.Keypad0));
-
 
         //=== Check key ===
         if(Input.GetKeyDown(KeyCode.Keypad0) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking) 
@@ -231,7 +229,10 @@ public class HeraControl : MonoBehaviour
                 slapTime = 0;
             }
         }
-
+        if(moveDirection.y < (gravity * -1))
+        {
+            moveDirection.y = (gravity * -1);
+        }
 
         //calculate direction afrer all
         oldY = Time.deltaTime - characterController.transform.position.y;
