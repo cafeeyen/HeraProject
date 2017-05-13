@@ -8,12 +8,12 @@ public class HarpyRedAIController : MonoBehaviour {
 	public CharacterController control;
 	public GameObject player;
 
-	public int followRange, dashRange;
-	public float height, moveSpeed, turnSpeed, maxDashTime, dashCooldown = 10;
-	private float distance, currentSpeed, currentDashTime, dashCooldownCounter;
+	public int followRange, dashRange, swipeRange;
+	public float height, moveSpeed, turnSpeed, maxDashTime, maxSwipeTime, dashCooldown = 10, swipeCooldown = 3;
+	private float distance, currentSpeed, currentDashTime, currentSwipeTime, dashCooldownCounter, swipeCooldownCounter;
 	private bool inRange;
 	private Vector3 moveVector, playerXZPosition, harpyXZPosition;
-	private enum HarpyRedAction {Neutral, Following, Dashing}
+	private enum HarpyRedAction {Neutral, Following, Dashing, Swiping}
 	private HarpyRedAction harpyRedAction;
 	
 
@@ -48,26 +48,34 @@ public class HarpyRedAIController : MonoBehaviour {
 					moveVector = Vector3.zero;
 				}				
 				
-				if(distance < dashRange && Time.time > dashCooldownCounter){
+				if(distance < swipeRange && Time.time > swipeCooldownCounter){
+					harpyRedAction = HarpyRedAction.Swiping;
+					currentSwipeTime = 0;
+				}
+				else if(distance < dashRange && Time.time > dashCooldownCounter){
 					harpyRedAction = HarpyRedAction.Dashing;
 					currentDashTime = 0;
 					currentSpeed += 40;
 				}
 			}
-			else if(harpyRedAction == HarpyRedAction.Dashing){
+			else if(harpyRedAction == HarpyRedAction.Dashing)
+			{
 				moveVector = transform.TransformDirection(Vector3.forward) * currentSpeed * Time.deltaTime;
 				currentDashTime += 1;
 				
-				if(currentDashTime > maxDashTime){
+				if(currentDashTime > maxDashTime)
+				{
 					animator.SetInteger("flying", 0);
 					currentSpeed -= 40;
 					dashCooldownCounter = Time.time + dashCooldown;
 					harpyRedAction = HarpyRedAction.Following;
 				}
-				else if(currentDashTime+(maxDashTime*0.2)> maxDashTime){
+				else if(currentDashTime+(maxDashTime*0.2)> maxDashTime)
+				{
 					animator.SetInteger("flying", 3);
 				}
-				else if(currentDashTime < 20){
+				else if(currentDashTime < 20)
+				{
 					animator.SetInteger("flying", 1);
 					moveVector = Vector3.zero;
 					harpyXZPosition = new Vector3(transform.position.x, 0, transform.position.z);
@@ -75,12 +83,28 @@ public class HarpyRedAIController : MonoBehaviour {
 					transform.rotation = Quaternion.Lerp(transform.rotation, 
 						Quaternion.LookRotation(playerXZPosition - harpyXZPosition), turnSpeed * Time.deltaTime);
 				}
-				else if(currentDashTime < maxDashTime){
+				else if(currentDashTime < maxDashTime)
+				{
 					animator.SetInteger("flying", 2);
 					moveVector.y = ((player.transform.position.y-5) - transform.position.y) * Time.deltaTime;
 				}
 			}
+
+			else if(harpyRedAction == HarpyRedAction.Swiping)
+			{
+				currentSwipeTime += 1;
+				moveVector = Vector3.zero;
+				animator.SetInteger("swiping", 1);
+				if(currentSwipeTime > maxSwipeTime)
+				{
+					animator.SetInteger("swiping", 0);
+					swipeCooldownCounter = Time.time + swipeCooldown;
+					harpyRedAction = HarpyRedAction.Following;
+				}
+			}
 		}
+
+
 		else if(!inRange){
 			animator.SetInteger("flying", 0);
 			currentSpeed = moveSpeed;

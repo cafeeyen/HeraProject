@@ -1,0 +1,18 @@
+﻿	HarpyRed
+1. Armature > Bone > Bone009 > Bone009end > HarpyRedHead
+
+	Harpy
+1. Armature > Bone > Bone009 > Bone009end > HarpyHead
+
+	CaniPlant
+หัว 1. Armature > Bone > Bone001 > Bone007 > Bone007end > BiteCollider
+แขนซ้าย 2. Armature > Bone003 > Bone004 > Bone005 > Bone010 > Bone012 > Bone012end > TentacleCollider(left) *[มี collider sphere ที่ผลักเราได้อยู่ข้างใน]
+แขนขวา 3. Armature > Bone003 > Bone004 > Bone005 > Bone013 > Bone014 > Bone015 > Bone015end > TentacleCollider(right) *[มี collider sphere ที่ผลักเราได้อยู่ข้างใน]
+
+	Cyclop
+ไม้ 1. Armature > Bone > Bone001 > Bone002 > Bone004 > Bone006 > Bone010 > Bone018 > Bone018end > CyclopHandClub
+หัว 2. Armature > Bone > Bone001 > Bone011 > Bone020 > CyclopHead
+
+	Golem
+มือซ้าย 1. Armature > Bone > Bone002 > Bone001 > Bone009 > Bone011 > Bone011end > GolemLeftHand
+มือขวา 2. Armature > Bone > Bone002 > Bone001 > Bone008 > Bone010 > Bone010end > GolemRightHand

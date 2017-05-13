@@ -21,7 +21,6 @@ public class ActivateTextAtLine : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
     {
-		Debug.Log(other.tag);
         if(other.gameObject.CompareTag("Player"))
             textBoxManager.reloadScript(theText);
 			textBoxManager.currentLine = startLine;
