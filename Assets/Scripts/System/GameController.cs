@@ -5,7 +5,12 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public Transform canvas;
-    public Transform player;
+    private GameObject player;
+
+    void Start ()
+    {
+		player = GameObject.FindWithTag("Player");
+	}
 
 	void Update ()
     {
@@ -16,14 +21,14 @@ public class GameController : MonoBehaviour
                 canvas.gameObject.SetActive(true);
                 // Pause
                 Time.timeScale = 0;
-                player.GetComponent<CharacterController>().enabled = false;
+                //player.gameObject.GetComponent<CharacterController>().enabled = false;
             }
             else
             {
                 canvas.gameObject.SetActive(false);
                 // Resume
                 Time.timeScale = 1;
-                player.GetComponent<CharacterController>().enabled = true;
+                //player.gameObject.GetComponent<CharacterController>().enabled = true;
             }
         }
     }

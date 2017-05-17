@@ -27,6 +27,8 @@ public class TextBoxManager : MonoBehaviour {
 		{
 			endAtLine = textLines.Length - 1;
 		}
+
+		
 		
 		if(isTextboxActive){enableTextBox();}
 		else{disableTextBox();}
@@ -34,6 +36,7 @@ public class TextBoxManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		player = GameObject.FindWithTag("Player").GetComponent<HeraControl>();
 		if(!isTextboxActive)
 		{
 			return;
@@ -60,6 +63,8 @@ public class TextBoxManager : MonoBehaviour {
 		isTextboxActive = true;
 		textBox.SetActive(true);
 		player.enabled = false;
+		Debug.Log("enableTextBox" + textBox.activeSelf);
+		
 	}
 
 	public void disableTextBox()
