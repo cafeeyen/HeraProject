@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GolemCollisionDetector : MonoBehaviour {
 
@@ -10,15 +8,12 @@ public class GolemCollisionDetector : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
 		{
+            controller = transform.root.GetComponent<GolemAIController>();
 
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-		{
-
+            if (transform.gameObject.name.Equals("GolemRHand") || transform.gameObject.name.Equals("GolemLHand"))
+            {
+                controller.Action = "Golem_Hand";
+            }
         }
     }
 }

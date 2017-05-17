@@ -15,6 +15,9 @@ public class DamageSystem
             case ("Ngua_Tail"): atk = (int)(atk * 1.0); break;
 
             // Cyclop
+            case ("Cyclop_Head"): atk = (int)(atk * 1.3); break;
+            case ("Cyclop_Club"): atk = (int)(atk * 0.9); break;
+
             // Harpy(Black)
             case ("Harpy_Head"): atk = (int)(atk * 1.2); break;
 
@@ -24,7 +27,9 @@ public class DamageSystem
             // CaniPlant
             case ("Cani_Bite"): atk = (int)(atk * 1.4); break;
             case ("Cani_Tentacle"): atk = (int)(atk * 0.9); break;
-                // Golem
+
+            // Golem
+            case ("Golem_Hand"): atk = (int)(atk * 1.0); break;
         }
 
         // Calculate def in player side

@@ -1,20 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GolemAIController : MonoBehaviour
 {
-
-    private Animator animator;
     public CharacterController control;
-    public GameObject player;
-
+    public Collider LhandCollider, RhandCollider;
     public int followRange, smashRange = 30, throwRange = 60, gravity=1000;
     public float moveSpeed, turnSpeed, smashCooldown = 1.5f, throwCooldown = 3.0f;
+
     private float distance, currentSpeed, smashCooldownCounter, throwCooldownCounter;
     private int currentSmashTime, maxSmashTime = 70, currentThrowTime, maxThrowTime = 120, stateChanged = 0;
     private bool inRange, isEntering = false, hasBeenOut = true;
+    private string action = "";
+
+    private GameObject player;
+    private Animator animator;
+    private static Golem status;
     private Vector3 moveVector, playerXZPosition, golemXZPosition;
+
+
     private enum GolemAttack { None, Smashing, Throwing }
     private enum GolemMoving { Attacking, Standing, Following }
     private GolemAttack golemAttack;
@@ -29,6 +32,8 @@ public class GolemAIController : MonoBehaviour
 
         golemAttack = GolemAttack.None;
         currentSpeed = moveSpeed;
+        LhandCollider.enabled = false;
+        RhandCollider.enabled = false;
     }
 
     // Update is called once per frame
@@ -108,6 +113,8 @@ public class GolemAIController : MonoBehaviour
                 golemAttack = GolemAttack.Smashing;
                 golemMoving = GolemMoving.Attacking;
                 currentSmashTime = 0;
+                LhandCollider.enabled = true;
+                RhandCollider.enabled = true;
             }
             if (distance < throwRange && distance > smashRange && Time.time > throwCooldownCounter && Time.time > smashCooldownCounter)
             {
@@ -167,6 +174,8 @@ public class GolemAIController : MonoBehaviour
                     animator.SetInteger("attacking", 0);
                     animator.SetInteger("walking", 0);
                     smashCooldownCounter = Time.time + smashCooldown;
+                    LhandCollider.enabled = false;
+                    RhandCollider.enabled = false;
                 }
             }
             else if (golemAttack == GolemAttack.None)
@@ -181,5 +190,18 @@ public class GolemAIController : MonoBehaviour
 		//Debug.Log("v" + golemAttack + " " + animator.GetInteger("attacking") + "  " + golemMoving + " at:" + distance + "  Changed " + stateChanged);
         moveVector.y -= gravity * Time.deltaTime;
         control.Move(moveVector);
+
+        // Attack-Damage Zone
+        if (!action.Equals(""))
+        {
+            DamageSystem.DamageToPlayer(status.ATK, action);
+            action = "";
+        }
+    }
+
+    public string Action
+    {
+        get { return action; }
+        set { action = value; }
     }
 }
