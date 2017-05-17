@@ -6,7 +6,7 @@ public class NguaAIController : MonoBehaviour
     private Animator animator;
     public CharacterController control;
     public Collider headCollider, tailCollider, LArmCollider, RArmCollider;
-    public static Ngua status;
+    private static Ngua status;
 
     public int followRange, slapRange = 8, tailRange = 12, dashRange = 25, gravity;
     private int currentHitTime, maxHitTime = 40;
@@ -40,14 +40,12 @@ public class NguaAIController : MonoBehaviour
         RArmCollider.enabled = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         distance = Vector3.Distance(transform.position, player.transform.position);
         inRange = distance < followRange;
         if (inRange)
         {
-            //Debug.Log(nguaAction + " " + nguaMoving + ": " + distance);
             if (distance < 6.5 && nguaMoving == NguaMoving.Following)
             {
                 nguaMoving = NguaMoving.Neutral;
@@ -190,7 +188,6 @@ public class NguaAIController : MonoBehaviour
         // Attack-Damage Zone
         if(!action.Equals(""))
         {
-            Debug.Log(action);
             DamageSystem.DamageToPlayer(status.ATK, action);
             action = "";
         }

@@ -12,11 +12,17 @@ public class DamageSystem
             // Ngua
             case ("Ngua_Head"): atk = (int)(atk * 1.2);break;
             case ("Ngua_Slap"): atk = (int)(atk * 0.8); break;
-            case ("Ngua_Tail"): atk = (int)(atk * 1); break;
+            case ("Ngua_Tail"): atk = (int)(atk * 1.0); break;
 
-                // Cyclop
-                // Harpy(Black)
-                // Harpy(Red)
+            // Cyclop
+            // Harpy(Black)
+            case ("Harpy_Head"): atk = (int)(atk * 1.2); break;
+
+            // Harpy(Red)
+            case ("HarpyRed_Head"): atk = (int)(atk * 1.2); break;
+
+                // CaniPlant
+                // Golem
         }
 
         // Calculate def in player side

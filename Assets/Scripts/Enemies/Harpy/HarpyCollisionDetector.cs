@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class HarpyCollisionDetector : MonoBehaviour {
+public class HarpyCollisionDetector : MonoBehaviour
+{
 
 	private HarpyAIController controller;
 
@@ -10,15 +9,22 @@ public class HarpyCollisionDetector : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
 		{
+            controller = transform.root.GetComponent<HarpyAIController>();
 
+            if (transform.gameObject.name.Equals("HarpyHead"))
+            {
+                controller.IsColliding = true;
+                controller.Action = "Harpy_Head";
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
-		{
-
+        {
+            if (transform.gameObject.name.Equals("HarpyHead"))
+                controller.IsColliding = false;
         }
     }
 }
