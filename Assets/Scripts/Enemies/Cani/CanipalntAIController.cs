@@ -4,31 +4,40 @@ using UnityEngine;
 
 public class CanipalntAIController : MonoBehaviour {
 
-	private Animator animator;
+	
 	public CharacterController control;
-	public GameObject player;
-
 	public int lookingRange, attackRange, turnSpeed;
+
 	private float attackCooldown = 1;
 	private float distance, attackCooldownCounter;
-	
 	private bool inRange;
+    private string action = "";
 
-	private Vector3 playerXZPosition, caniplantXZPosition;
+    private GameObject player;
+    private Animator animator;
+    private static Cani status;
+    private Vector3 playerXZPosition, caniplantXZPosition;
+
 	private enum CaniplantAction {Neutral, Looking, Biting, Hitting}
 	private CaniplantAction caniplantAction;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		animator = gameObject.GetComponentInChildren<Animator>();
 		control = gameObject.GetComponent<CharacterController>();
 		
 		player = GameObject.FindWithTag("Player");
-		caniplantAction = CaniplantAction.Neutral;
+        status = new Cani(1);
+        // For check Ngua status each Lv.
+        //Debug.Log(status.LV + " " + status.ATK + " " + status.DEF + " " + status.CurHP + "/" +status.HP);
+
+        caniplantAction = CaniplantAction.Neutral;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		distance = Vector3.Distance(transform.position, player.transform.position);
 		inRange = distance < lookingRange;
 		if(inRange)
@@ -41,8 +50,6 @@ public class CanipalntAIController : MonoBehaviour {
 				transform.rotation = Quaternion.Lerp(transform.rotation, 
 						Quaternion.LookRotation(playerXZPosition - caniplantXZPosition), turnSpeed * Time.deltaTime);
 				
-				
-				
 				if(distance < attackRange && Time.time > attackCooldownCounter)
 				{
 					int randnum = Random.Range(0, 2);
@@ -54,17 +61,11 @@ public class CanipalntAIController : MonoBehaviour {
 					{
 						caniplantAction = CaniplantAction.Biting;
 					}
-					
 				}
 				
 			}
 			else if(caniplantAction == CaniplantAction.Hitting)
 			{
-				if(CaniHeadCollisionDetector.isColliding)
-				{
-					Debug.Log("== Ouch Tentacle ==");
-					CaniHeadCollisionDetector.isColliding = false;
-				}
 				animator.SetInteger("attacking", -1);
 				if(animator.GetCurrentAnimatorStateInfo(0).IsName("Armature|caniplant_attack2"))
 				{
@@ -74,11 +75,6 @@ public class CanipalntAIController : MonoBehaviour {
 			}
 			else if(caniplantAction == CaniplantAction.Biting)
 			{
-				if(CaniHeadCollisionDetector.isColliding)
-				{
-					Debug.Log("== Ouch Bite ==");
-					CaniHeadCollisionDetector.isColliding = false;
-				}
 				animator.SetInteger("attacking", 1);
 				if(animator.GetCurrentAnimatorStateInfo(0).IsName("Armature|caniplant_attack"))
 				{
@@ -97,5 +93,18 @@ public class CanipalntAIController : MonoBehaviour {
 			caniplantAction = CaniplantAction.Neutral;
 			animator.SetInteger("attacking", 0);
 		}
-	}
+
+        // Attack-Damage Zone
+        if (!action.Equals(""))
+        {
+            DamageSystem.DamageToPlayer(status.ATK, action);
+            action = "";
+        }
+    }
+
+    public string Action
+    {
+        get { return action; }
+        set { action = value; }
+    }
 }

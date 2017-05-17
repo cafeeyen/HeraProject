@@ -21,7 +21,9 @@ public class DamageSystem
             // Harpy(Red)
             case ("HarpyRed_Head"): atk = (int)(atk * 1.2); break;
 
-                // CaniPlant
+            // CaniPlant
+            case ("Cani_Bite"): atk = (int)(atk * 1.4); break;
+            case ("Cani_Tentacle"): atk = (int)(atk * 0.9); break;
                 // Golem
         }
 

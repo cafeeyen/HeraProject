@@ -3,18 +3,21 @@
 public class HarpyAIController : MonoBehaviour
 {
 
-	private Animator animator;
+	
 	public CharacterController control;
-	public GameObject player;
     public Collider headCollider;
-    private static Harpy status;
-
     public int followRange, dashRange;
 	public float height, moveSpeed, turnSpeed, maxDashTime, dashCooldown = 10;
+
 	private float distance, currentSpeed, currentDashTime, dashCooldownCounter;
 	private bool inRange, isColliding;
     private string action = "";
+
+    private GameObject player;
+    private Animator animator;
+    private static Harpy status;
     private Vector3 moveVector, playerXZPosition, harpyXZPosition;
+
 	private enum HarpyAction {Neutral, Following, Dashing}
 	private HarpyAction harpyAction;
 	

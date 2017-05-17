@@ -3,23 +3,25 @@
 public class NguaAIController : MonoBehaviour
 {
 
-    private Animator animator;
     public CharacterController control;
     public Collider headCollider, tailCollider, LArmCollider, RArmCollider;
-    private static Ngua status;
-
-    public int followRange, slapRange = 8, tailRange = 12, dashRange = 25, gravity;
-    private int currentHitTime, maxHitTime = 40;
+    public int followRange, slapRange = 8, tailRange = 12, dashRange = 25, gravity = 50;
     public float moveSpeed, turnSpeed, maxDashTime, slapCooldown = 1.55f, tailCooldown = 3.5f, dashCooldown = 5.5f;
+
+    private int currentHitTime, maxHitTime = 40;
     private float distance, currentSpeed, currentDashTime, slapCooldownCounter, tailCooldownCounter, dashCooldownCounter;
     private bool inRange, isColliding;
     private string action = "";
+
+    private GameObject player;
+    private Animator animator;
+    private static Ngua status;
     private Vector3 moveVector, playerXZPosition, nguaXZPosition;
+
     private enum NguaAction { None, Slapping, Dashing, TailAttack }
     private enum NguaMoving { Neutral, Following, Attacking }
     private NguaAction nguaAction;
     private NguaMoving nguaMoving;
-    private GameObject player;
 
     // Use this for initialization
     void Start()

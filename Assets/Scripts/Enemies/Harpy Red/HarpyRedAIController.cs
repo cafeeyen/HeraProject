@@ -3,18 +3,21 @@
 public class HarpyRedAIController : MonoBehaviour
 {
 
-	private Animator animator;
+	
 	public CharacterController control;
-	public GameObject player;
     public Collider headCollider;
-    private static HarpyRed status;
-
     public int followRange, dashRange, swipeRange;
 	public float height, moveSpeed, turnSpeed, maxDashTime, maxSwipeTime, dashCooldown = 10, swipeCooldown = 3;
+
 	private float distance, currentSpeed, currentDashTime, currentSwipeTime, dashCooldownCounter, swipeCooldownCounter;
 	private bool inRange, isColliding;
     private string action = "";
+
+    private GameObject player;
+    private Animator animator;
+    private static HarpyRed status;
     private Vector3 moveVector, playerXZPosition, harpyXZPosition;
+
 	private enum HarpyRedAction {Neutral, Following, Dashing, Swiping}
 	private HarpyRedAction harpyRedAction;
 	

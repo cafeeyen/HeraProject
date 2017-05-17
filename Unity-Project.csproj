@@ -96,8 +96,6 @@
     <Compile Include="Assets\Scripts\Character\ParticleController.cs" />
     <Compile Include="Assets\Scripts\Enemies\Cani\Cani.cs" />
     <Compile Include="Assets\Scripts\Enemies\Cani\CaniCollisionDetector.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Cani\CaniHeadCollisionDetector.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Cani\CaniTentacleCollisionDetector.cs" />
     <Compile Include="Assets\Scripts\Enemies\Cani\CanipalntAIController.cs" />
     <Compile Include="Assets\Scripts\Enemies\Cyclop\Cyclop.cs" />
     <Compile Include="Assets\Scripts\Enemies\Cyclop\CyclopAIControl.cs" />
