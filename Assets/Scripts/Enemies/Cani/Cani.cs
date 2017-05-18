@@ -40,6 +40,12 @@ public class Cani
         get { return curHp; }
         set { curHp = value; }
     }
+
+    public bool Alive
+    {
+        get { return alive; }
+        set { alive = value; }
+    }
 }
 
 /*

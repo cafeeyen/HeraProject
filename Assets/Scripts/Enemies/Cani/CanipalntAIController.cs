@@ -98,6 +98,11 @@ public class CanipalntAIController : MonoBehaviour {
             DamageSystem.DamageToPlayer(status.ATK, action);
             action = "";
         }
+        if (status.CurHP <= 0)
+        {
+            status.Alive = false;
+            Destroy(gameObject);
+        }
     }
 
     public string Action

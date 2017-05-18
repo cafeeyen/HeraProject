@@ -112,6 +112,11 @@ public class HarpyAIController : MonoBehaviour
             DamageSystem.DamageToPlayer(status.ATK, action);
             action = "";
         }
+        if (status.CurHP <= 0)
+        {
+            status.Alive = false;
+            Destroy(gameObject);
+        }
     }
     public bool IsColliding
     {

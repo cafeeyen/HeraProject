@@ -99,7 +99,7 @@ public class LoadingScreenManager : MonoBehaviour
         {
             SceneManager.UnloadSceneAsync(currentScene.name);
         }
-            
+
         else
         {
             operation.allowSceneActivation = true;
@@ -152,13 +152,11 @@ public class LoadingScreenManager : MonoBehaviour
     }
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name != "LoadingScreen")
         {
-            Debug.Log("Level Loaded" + scene.name + " at:" + spawnPosition);
-            if(scene.name != "LoadingScreen")
-            {
-                GameObject.FindWithTag("Player").transform.position = spawnPosition;
-            }
-            
+            GameObject.FindWithTag("Player").transform.position = spawnPosition;
         }
+    }
 
 }

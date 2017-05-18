@@ -32,6 +32,7 @@ public class CyclopAIControl : MonoBehaviour
         cyclopAction = CyclopAction.None;
         cyclopMoving = CyclopMoving.Standing;
         animator.SetInteger("attacking", 0);
+        status = new Cyclop(1);
         headCollider.enabled = false;
         clubCollider.enabled = false;
     }
@@ -155,6 +156,11 @@ public class CyclopAIControl : MonoBehaviour
         {
             DamageSystem.DamageToPlayer(status.ATK, action);
             action = "";
+        }
+        if (status.CurHP <= 0)
+        {
+            status.Alive = false;
+            Destroy(gameObject);
         }
     }
 

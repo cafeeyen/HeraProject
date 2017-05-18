@@ -32,6 +32,7 @@ public class GolemAIController : MonoBehaviour
 
         golemAttack = GolemAttack.None;
         currentSpeed = moveSpeed;
+        status = new Golem(1);
         LhandCollider.enabled = false;
         RhandCollider.enabled = false;
     }
@@ -196,6 +197,11 @@ public class GolemAIController : MonoBehaviour
         {
             DamageSystem.DamageToPlayer(status.ATK, action);
             action = "";
+        }
+        if (status.CurHP <= 0)
+        {
+            status.Alive = false;
+            Destroy(gameObject);
         }
     }
 
