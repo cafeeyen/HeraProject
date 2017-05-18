@@ -23,7 +23,6 @@ public class ActivateTextAtLine : MonoBehaviour {
     {
         if(other.gameObject.CompareTag("Player"))
 		{
-			Debug.Log("trig");
 			textBoxManager.reloadScript(theText);
 			textBoxManager.currentLine = startLine;
 			textBoxManager.endAtLine = endLine;

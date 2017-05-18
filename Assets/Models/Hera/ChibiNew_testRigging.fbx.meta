@@ -116,6 +116,7 @@ ModelImporter:
     7400032: Armature|Mia_kickUp
     7400034: Armature|Mia_kickDown
     7400036: Armature|Mia_combo0
+    7400038: Armature|Mia_death_hang
     9500000: //RootNode
     13700000: asscessory
     13700002: Body
@@ -2065,6 +2066,112 @@ ModelImporter:
       takeName: Armature|Mia_combo1
       firstFrame: 0
       lastFrame: 1.7
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone.001
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.006
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.006/Bone.008
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.006/Bone.008/Bone.008_end
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.005
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.005/Bone.007
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.005/Bone.007/Bone.009
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.005/Bone.007/Bone.009/Bone.009_end
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.010
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.010/Bone.010_end
+        weight: 1
+      - path: Armature/Bone.003
+        weight: 1
+      - path: Armature/Bone.003/Bone.012
+        weight: 1
+      - path: Armature/Bone.003/Bone.012/Bone.014
+        weight: 1
+      - path: Armature/Bone.003/Bone.012/Bone.014/Bone.016
+        weight: 1
+      - path: Armature/Bone.003/Bone.012/Bone.014/Bone.016/Bone.016_end
+        weight: 1
+      - path: Armature/Bone.004
+        weight: 1
+      - path: Armature/Bone.004/Bone.013
+        weight: 1
+      - path: Armature/Bone.004/Bone.013/Bone.015
+        weight: 1
+      - path: Armature/Bone.004/Bone.013/Bone.015/Bone.017
+        weight: 1
+      - path: Armature/Bone.004/Bone.013/Bone.015/Bone.017/Bone.017_end
+        weight: 1
+      - path: asscessory
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: bracelet1
+        weight: 1
+      - path: bracelet2
+        weight: 1
+      - path: bracelet3
+        weight: 1
+      - path: bracelet4
+        weight: 1
+      - path: Crown
+        weight: 1
+      - path: Earing1
+        weight: 1
+      - path: Earing2
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: HairTail
+        weight: 1
+      - path: HairTail2
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Point
+        weight: 1
+      - path: Suit
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Mia_death_hang
+      takeName: Armature|Mia_death
+      firstFrame: 29
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

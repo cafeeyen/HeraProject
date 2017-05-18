@@ -16,8 +16,9 @@ public class HeraControl : MonoBehaviour
     private int comboMove = 0, comboTime = 0, maxcomboTime = 25;
     private bool isGround, takeNextCombo = false;
 
-    private enum HeraAction { Standing, Walking, Comboing, Kicking, Slaping }
-    HeraAction heraAction, oldAction;
+    private enum HeraAction { Standing, Walking, Comboing, Kicking, Slaping, Die }
+    private HeraAction heraAction, oldAction;
+
 
 
     // Use this for initialization
@@ -32,17 +33,22 @@ public class HeraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Face direction
-        if (Input.GetKey("up") && Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, 1f));
-        else if (Input.GetKey("up") && Input.GetKey("right")) getRotation(new Vector3(1f, 0f, 1f));
-        else if (Input.GetKey("down") && Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, -1f));
-        else if (Input.GetKey("down") && Input.GetKey("right")) getRotation(new Vector3(1f, 0f, -1f));
+        
+        if(heraAction != HeraAction.Die)
+        {
+            // Face direction
+            if (Input.GetKey("up") && Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, 1f));
+            else if (Input.GetKey("up") && Input.GetKey("right")) getRotation(new Vector3(1f, 0f, 1f));
+            else if (Input.GetKey("down") && Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, -1f));
+            else if (Input.GetKey("down") && Input.GetKey("right")) getRotation(new Vector3(1f, 0f, -1f));
 
-        else if (Input.GetKey("up")) getRotation(new Vector3(0f, 0f, 1f));
-        else if (Input.GetKey("down")) getRotation(new Vector3(0f, 0f, -1f));
-        else if (Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, 0f));
-        else if (Input.GetKey("right")) getRotation(new Vector3(1f, 0f, 0f));
-
+            else if (Input.GetKey("up")) getRotation(new Vector3(0f, 0f, 1f));
+            else if (Input.GetKey("down")) getRotation(new Vector3(0f, 0f, -1f));
+            else if (Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, 0f));
+            else if (Input.GetKey("right")) getRotation(new Vector3(1f, 0f, 0f));
+        }
+        
+        
 
         //=== Check key ===
         if(Input.GetKeyDown(KeyCode.Keypad0) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking) 
@@ -77,8 +83,6 @@ public class HeraControl : MonoBehaviour
         }
         
         
-        
-
         if (heraAction == HeraAction.Standing)
         {
             anim.SetInteger("Moving", 0);
@@ -228,7 +232,27 @@ public class HeraControl : MonoBehaviour
                 anim.SetInteger("Slapping", 0);
                 slapTime = 0;
             }
+        } 
+
+        if (heraAction == HeraAction.Die)
+        {
+            anim.SetInteger("die", 2);
+
+            moveDirection = Vector3.zero;
+            
         }
+
+        if(GameData.data.curHp <= 0)
+        {
+            if(anim.GetInteger("ComboAttack") != 6 || anim.GetInteger("ComboAttack") != 0)
+            {
+                anim.SetInteger("ComboAttack", 6);
+            }
+            anim.SetInteger("die", 1);
+            heraAction = HeraAction.Die;
+        }
+
+
         if(moveDirection.y < (gravity * -1))
         {
             moveDirection.y = (gravity * -1);
@@ -269,4 +293,5 @@ public class HeraControl : MonoBehaviour
         }
         return false;
     }
+
 }

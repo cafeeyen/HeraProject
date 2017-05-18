@@ -3,6 +3,7 @@
 public class DamageSystem
 {
     private static GameData player = GameData.data;
+    private HeraControl hera;
 
     public static void DamageToPlayer(int atk, string action)
     {
@@ -54,9 +55,18 @@ public class DamageSystem
         player.curHp -= Mathf.Max(0, atk - def);
 
         // If Player HP <= 0 ---> Dead
-        if (player.curHp <= 0)
-            Time.timeScale = 0;
+        if (player.curHp <= 0){
+            //Time.timeScale = 0;
+            //heraDie();
+        }
+            
     }
+
+    // //can't useabel cause nin static method 
+    // public void heraDie()
+    // {
+    //     hera.dieHera();
+    // }
 
     public static void dropItem()
     {
@@ -66,4 +76,5 @@ public class DamageSystem
         //  -> If HP/MP Potion --> Increse Player HP/MP
         //  -> Else(Buff potion) --> Add buff to Player
     }
+
 }
