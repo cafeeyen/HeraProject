@@ -155,19 +155,15 @@ public class LoadingScreenManager : MonoBehaviour
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-<<<<<<< HEAD
         if (scene.name != "LoadingScreen")
         {
             GameObject.FindWithTag("Player").transform.position = spawnPosition;
         }
-=======
         Debug.Log("Level Loaded" + scene.name + " at:" + spawnPosition);
         if(scene.name != "LoadingScreen")
         {
             GameObject.FindWithTag("Player").transform.position = spawnPosition;
         }
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
->>>>>>> origin/master
     }
-
 }

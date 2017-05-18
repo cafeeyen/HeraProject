@@ -52,11 +52,10 @@ public class DamageSystem
 
         // Decrease Player HP
         player.curHp -= Mathf.Max(0, atk - def);
-        Debug.Log("ATK " + atk + " - DEF " + def + " : " + player.curHp + "/" + player.totalHp);
 
         // If Player HP <= 0 ---> Dead
         if (player.curHp <= 0)
-            Debug.Log("Bye~");
+            Time.timeScale = 0;
     }
 
     public static void dropItem()
