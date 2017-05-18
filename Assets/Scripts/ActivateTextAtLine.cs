@@ -22,9 +22,12 @@ public class ActivateTextAtLine : MonoBehaviour {
 	private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
-            textBoxManager.reloadScript(theText);
+		{
+			Debug.Log("trig");
+			textBoxManager.reloadScript(theText);
 			textBoxManager.currentLine = startLine;
 			textBoxManager.endAtLine = endLine;
 			textBoxManager.enableTextBox();
+		}
     }
 }

@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9519E6AE-6D0B-1D5F-1F22-DD68948B3B63}</ProjectGuid>
+    <ProjectGuid>{F1C46460-6D00-D0CA-4AD7-5E469C4E7492}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,8 +61,6 @@
      <Compile Include="Assets\Scripts\Character\ParticleController.cs" />
      <Compile Include="Assets\Scripts\Enemies\Cani\Cani.cs" />
      <Compile Include="Assets\Scripts\Enemies\Cani\CaniCollisionDetector.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Cani\CaniHeadCollisionDetector.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Cani\CaniTentacleCollisionDetector.cs" />
      <Compile Include="Assets\Scripts\Enemies\Cani\CanipalntAIController.cs" />
      <Compile Include="Assets\Scripts\Enemies\Cyclop\Cyclop.cs" />
      <Compile Include="Assets\Scripts\Enemies\Cyclop\CyclopAIControl.cs" />
@@ -216,7 +214,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{9AF9037E-4414-AD3E-E6C2-44F09F468A55}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{549BA7D2-B91B-3765-E694-F28F9BCEC5BE}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

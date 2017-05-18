@@ -56,9 +56,9 @@ public class StartMenu : MonoBehaviour
             // Test map
             //LoadingScreenManager.LoadScene(8, new Vector3(1122, 3, 259));
             // Real map
-            //LoadingScreenManager.LoadScene(1, new Vector3(560, 3, 170));
+            LoadingScreenManager.LoadScene(1, new Vector3(560, 3, 170));
             //map 5 test monster
-            LoadingScreenManager.LoadScene(5, new Vector3(590, 25, 725));
+            //LoadingScreenManager.LoadScene(5, new Vector3(590, 25, 725));
 
         else if (currentMenu == Menu.Continue)
             LoadingScreenManager.LoadScene(SaveLoad.savedGames.map, new Vector3(SaveLoad.savedGames.posx, SaveLoad.savedGames.posy, SaveLoad.savedGames.posz) );
