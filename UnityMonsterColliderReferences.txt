@@ -15,4 +15,8 @@
 
 	Golem
 มือซ้าย 1. Armature > Bone > Bone002 > Bone001 > Bone009 > Bone011 > Bone011end > GolemLeftHand
-มือขวา 2. Armature > Bone > Bone002 > Bone001 > Bone008 > Bone010 > Bone010end > GolemRightHand
+มือขวา 2. Armature > Bone > Bone002 > Bone001 > Bone008 > Bone010 > Bone010end > GolemRightHand 
+
+	MiaNoi
+มือซ้าย 1. Armature > LowerSpine > UpperSpine > LSholder > LUpperArm > LLowerArm > LLowerArmend > LeftHandCollider
+กะทะ 2. Armature > LowerSpine > UpperSpine > RSholder > RUpperArm > RLowerArm > Pan1 > Panend > PanCollider

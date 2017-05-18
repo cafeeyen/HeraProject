@@ -74,6 +74,9 @@
      <Compile Include="Assets\Scripts\Enemies\Harpy\Harpy.cs" />
      <Compile Include="Assets\Scripts\Enemies\Harpy\HarpyAIController.cs" />
      <Compile Include="Assets\Scripts\Enemies\Harpy\HarpyCollisionDetector.cs" />
+     <Compile Include="Assets\Scripts\Enemies\MiaNoi\MiaNoi.cs" />
+     <Compile Include="Assets\Scripts\Enemies\MiaNoi\MiaNoiAIController.cs" />
+     <Compile Include="Assets\Scripts\Enemies\MiaNoi\MiaNoiCollisionDetector.cs" />
      <Compile Include="Assets\Scripts\Enemies\Ngua\Ngua.cs" />
      <Compile Include="Assets\Scripts\Enemies\Ngua\NguaAIController.cs" />
      <Compile Include="Assets\Scripts\Enemies\Ngua\NguaCollisionDetector.cs" />

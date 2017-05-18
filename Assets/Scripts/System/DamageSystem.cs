@@ -56,17 +56,17 @@ public class DamageSystem
 
         // If Player HP <= 0 ---> Dead
         if (player.curHp <= 0){
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             //heraDie();
         }
             
     }
 
-    //can't useabel cause nin static method 
-    public void heraDie()
-    {
-        hera.dieHera();
-    }
+    // //can't useabel cause nin static method 
+    // public void heraDie()
+    // {
+    //     hera.dieHera();
+    // }
 
     public static void dropItem()
     {

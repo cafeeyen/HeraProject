@@ -1,0 +1,877 @@
+fileFormatVersion: 2
+guid: 3271a22306b9f1146a75072d6456c035
+timeCreated: 1495110367
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: body
+    100004: Button
+    100006: Button2
+    100008: //RootNode
+    100010: Hair
+    100012: Head
+    100014: Head 1
+    100016: Head_end
+    100018: LFoot
+    100020: LFoot_end
+    100022: LLowerArm
+    100024: LLowerArm_end
+    100026: LLowerLeg
+    100028: LowerSpine
+    100030: LPelvic
+    100032: LShoulder
+    100034: LUpperArm
+    100036: LUpperLeg
+    100038: Pan
+    100040: Pan 1
+    100042: Pan_end
+    100044: RFoot
+    100046: RFoot_end
+    100048: ring1
+    100050: ring2
+    100052: ring3
+    100054: ring4
+    100056: RLowerArm
+    100058: RLowerLeg
+    100060: RPelvic
+    100062: RShoulder
+    100064: RUpperArm
+    100066: RUpperLeg
+    100068: Suit
+    100070: UpperSpine
+    400000: Armature
+    400002: body
+    400004: Button
+    400006: Button2
+    400008: //RootNode
+    400010: Hair
+    400012: Head
+    400014: Head 1
+    400016: Head_end
+    400018: LFoot
+    400020: LFoot_end
+    400022: LLowerArm
+    400024: LLowerArm_end
+    400026: LLowerLeg
+    400028: LowerSpine
+    400030: LPelvic
+    400032: LShoulder
+    400034: LUpperArm
+    400036: LUpperLeg
+    400038: Pan
+    400040: Pan 1
+    400042: Pan_end
+    400044: RFoot
+    400046: RFoot_end
+    400048: ring1
+    400050: ring2
+    400052: ring3
+    400054: ring4
+    400056: RLowerArm
+    400058: RLowerLeg
+    400060: RPelvic
+    400062: RShoulder
+    400064: RUpperArm
+    400066: RUpperLeg
+    400068: Suit
+    400070: UpperSpine
+    4300000: Head
+    4300002: Hair
+    4300004: Pan
+    4300006: Button2
+    4300008: Button
+    4300010: body
+    4300012: ring1
+    4300014: ring2
+    4300016: ring3
+    4300018: ring4
+    4300020: Suit
+    7400000: Armature|Mianoi_attack
+    7400002: Armature|Mianoi_attack2
+    7400004: Armature|Mianoi_attack3
+    7400006: Armature|Mianoi_DashAttack
+    7400008: Armature|Mianoi_idle
+    7400010: Armature|Mianoi_run
+    7400012: Armature|Mianoi_scream
+    9500000: //RootNode
+    13700000: body
+    13700002: Button
+    13700004: Button2
+    13700006: Hair
+    13700008: Head
+    13700010: Pan
+    13700012: ring1
+    13700014: ring2
+    13700016: ring3
+    13700018: ring4
+    13700020: Suit
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Mianoi_attack
+      takeName: Armature|Mianoi_attack
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/LowerSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1/Head_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm/LLowerArm_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1/Pan_end
+        weight: 1
+      - path: Armature/LPelvic
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot/LFoot_end
+        weight: 1
+      - path: Armature/RPelvic
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot/RFoot_end
+        weight: 1
+      - path: body
+        weight: 1
+      - path: Button
+        weight: 1
+      - path: Button2
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Pan
+        weight: 1
+      - path: ring1
+        weight: 1
+      - path: ring2
+        weight: 1
+      - path: ring3
+        weight: 1
+      - path: ring4
+        weight: 1
+      - path: Suit
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Mianoi_attack2
+      takeName: Armature|Mianoi_attack2
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/LowerSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1/Head_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm/LLowerArm_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1/Pan_end
+        weight: 1
+      - path: Armature/LPelvic
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot/LFoot_end
+        weight: 1
+      - path: Armature/RPelvic
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot/RFoot_end
+        weight: 1
+      - path: body
+        weight: 1
+      - path: Button
+        weight: 1
+      - path: Button2
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Pan
+        weight: 1
+      - path: ring1
+        weight: 1
+      - path: ring2
+        weight: 1
+      - path: ring3
+        weight: 1
+      - path: ring4
+        weight: 1
+      - path: Suit
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Mianoi_attack3
+      takeName: Armature|Mianoi_attack3
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/LowerSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1/Head_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm/LLowerArm_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1/Pan_end
+        weight: 1
+      - path: Armature/LPelvic
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot/LFoot_end
+        weight: 1
+      - path: Armature/RPelvic
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot/RFoot_end
+        weight: 1
+      - path: body
+        weight: 1
+      - path: Button
+        weight: 1
+      - path: Button2
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Pan
+        weight: 1
+      - path: ring1
+        weight: 1
+      - path: ring2
+        weight: 1
+      - path: ring3
+        weight: 1
+      - path: ring4
+        weight: 1
+      - path: Suit
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Mianoi_DashAttack
+      takeName: Armature|Mianoi_DashAttack
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/LowerSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1/Head_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm/LLowerArm_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1/Pan_end
+        weight: 1
+      - path: Armature/LPelvic
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot/LFoot_end
+        weight: 1
+      - path: Armature/RPelvic
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot/RFoot_end
+        weight: 1
+      - path: body
+        weight: 1
+      - path: Button
+        weight: 1
+      - path: Button2
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Pan
+        weight: 1
+      - path: ring1
+        weight: 1
+      - path: ring2
+        weight: 1
+      - path: ring3
+        weight: 1
+      - path: ring4
+        weight: 1
+      - path: Suit
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Mianoi_idle
+      takeName: Armature|Mianoi_idle
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/LowerSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1/Head_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm/LLowerArm_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1/Pan_end
+        weight: 1
+      - path: Armature/LPelvic
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot/LFoot_end
+        weight: 1
+      - path: Armature/RPelvic
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot/RFoot_end
+        weight: 1
+      - path: body
+        weight: 1
+      - path: Button
+        weight: 1
+      - path: Button2
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Pan
+        weight: 1
+      - path: ring1
+        weight: 1
+      - path: ring2
+        weight: 1
+      - path: ring3
+        weight: 1
+      - path: ring4
+        weight: 1
+      - path: Suit
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Mianoi_run
+      takeName: Armature|Mianoi_run
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/LowerSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1/Head_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm/LLowerArm_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1/Pan_end
+        weight: 1
+      - path: Armature/LPelvic
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot/LFoot_end
+        weight: 1
+      - path: Armature/RPelvic
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot/RFoot_end
+        weight: 1
+      - path: body
+        weight: 1
+      - path: Button
+        weight: 1
+      - path: Button2
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Pan
+        weight: 1
+      - path: ring1
+        weight: 1
+      - path: ring2
+        weight: 1
+      - path: ring3
+        weight: 1
+      - path: ring4
+        weight: 1
+      - path: Suit
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Mianoi_scream
+      takeName: Armature|Mianoi_scream
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/LowerSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/Head 1/Head_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/LShoulder/LUpperArm/LLowerArm/LLowerArm_end
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1
+        weight: 1
+      - path: Armature/LowerSpine/UpperSpine/RShoulder/RUpperArm/RLowerArm/Pan 1/Pan_end
+        weight: 1
+      - path: Armature/LPelvic
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot
+        weight: 1
+      - path: Armature/LPelvic/LUpperLeg/LLowerLeg/LFoot/LFoot_end
+        weight: 1
+      - path: Armature/RPelvic
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot
+        weight: 1
+      - path: Armature/RPelvic/RUpperLeg/RLowerLeg/RFoot/RFoot_end
+        weight: 1
+      - path: body
+        weight: 1
+      - path: Button
+        weight: 1
+      - path: Button2
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Pan
+        weight: 1
+      - path: ring1
+        weight: 1
+      - path: ring2
+        weight: 1
+      - path: ring3
+        weight: 1
+      - path: ring4
+        weight: 1
+      - path: Suit
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
