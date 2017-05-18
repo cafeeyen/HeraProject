@@ -34,6 +34,7 @@ public class HeraControl : MonoBehaviour
     void Update()
     {
         
+<<<<<<< HEAD
         if(heraAction != HeraAction.Die)
         {
             // Face direction
@@ -48,6 +49,19 @@ public class HeraControl : MonoBehaviour
             else if (Input.GetKey("right")) getRotation(new Vector3(1f, 0f, 0f));
         }
         
+=======
+        
+        // Face direction
+        if (Input.GetKey("up") && Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, 1f));
+        else if (Input.GetKey("up") && Input.GetKey("right")) getRotation(new Vector3(1f, 0f, 1f));
+        else if (Input.GetKey("down") && Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, -1f));
+        else if (Input.GetKey("down") && Input.GetKey("right")) getRotation(new Vector3(1f, 0f, -1f));
+
+        else if (Input.GetKey("up")) getRotation(new Vector3(0f, 0f, 1f));
+        else if (Input.GetKey("down")) getRotation(new Vector3(0f, 0f, -1f));
+        else if (Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, 0f));
+        else if (Input.GetKey("right")) getRotation(new Vector3(1f, 0f, 0f));
+>>>>>>> origin/master
         
 
         //=== Check key ===
@@ -244,10 +258,13 @@ public class HeraControl : MonoBehaviour
 
         if(GameData.data.curHp <= 0)
         {
+<<<<<<< HEAD
             if(anim.GetInteger("ComboAttack") != 6 || anim.GetInteger("ComboAttack") != 0)
             {
                 anim.SetInteger("ComboAttack", 6);
             }
+=======
+>>>>>>> origin/master
             anim.SetInteger("die", 1);
             heraAction = HeraAction.Die;
         }
@@ -294,4 +311,13 @@ public class HeraControl : MonoBehaviour
         return false;
     }
 
+<<<<<<< HEAD
+=======
+    // public void dieHera()
+    // {
+    //     heraAction = HeraAction.Die;
+    //     anim.SetInteger("die", 1);
+    //     moveDirection = Vector3.zero;
+    // }
+>>>>>>> origin/master
 }
