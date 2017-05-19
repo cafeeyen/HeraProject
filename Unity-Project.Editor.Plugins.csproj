@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\2D GUI\dialog01.txt" />
+    <None Include="Assets\2D GUI\dialog_boss.txt" />
     <None Include="Assets\Shaders\WaterRipple.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />

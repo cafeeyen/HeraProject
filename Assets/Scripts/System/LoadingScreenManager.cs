@@ -159,7 +159,6 @@ public class LoadingScreenManager : MonoBehaviour
         {
             GameObject.FindWithTag("Player").transform.position = spawnPosition;
         }
-        Debug.Log("Level Loaded" + scene.name + " at:" + spawnPosition);
         if(scene.name != "LoadingScreen")
         {
             GameObject.FindWithTag("Player").transform.position = spawnPosition;

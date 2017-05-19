@@ -206,7 +206,7 @@ public class HeraControl : MonoBehaviour
             }
             //get next combo
             if(comboTime < (maxcomboTime/2) && comboMove < 7){takeNextCombo = false;}
-            else if(Input.GetKeyDown(KeyCode.Keypad0) && !takeNextCombo && comboMove < 5){takeNextCombo = true;}
+            else if(Input.GetKeyDown(KeyCode.Z) && !takeNextCombo && comboMove < 5){takeNextCombo = true;}
 
         }
 

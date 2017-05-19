@@ -55,8 +55,9 @@ public class CollisionCheck : MonoBehaviour
                 par.playParticle(new Color(1, 0, 0, 1));
             }
         }
+
         else if (body.gameObject.tag == "Equipment")
-        {
+        {/*
             if (!inventory.isInventoryFull())
             {
                 switch ((EquipmentType)Random.Range(1, 4))
@@ -99,7 +100,7 @@ public class CollisionCheck : MonoBehaviour
                 }
                 Destroy(body.gameObject);
                 par.playParticle(new Color(1, 1, 0, 1));
-            }
+            }*/
         }
     }
 }

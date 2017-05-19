@@ -19,9 +19,8 @@ public class PaperHat : Equipment
         // GameData.data.itemID += 1; 
     }
 
-    public PaperHat()
+    public PaperHat(Rarity irarity)
     {
-        irarity = (Rarity)Random.Range(0, 3);
         iatk = iatk * (int)(((int)irarity + 1 * Random.Range(0.8f, 1.1f)) * Random.Range(0.6f, 1.5f));
         idef = idef * (int)(((int)irarity + 1 * Random.Range(0.8f, 1.1f)) * Random.Range(0.6f, 1.5f));
         ihp = ihp * (int)(((int)irarity + 1 * Random.Range(0.8f, 1.1f)) * Random.Range(0.6f, 1.5f));
