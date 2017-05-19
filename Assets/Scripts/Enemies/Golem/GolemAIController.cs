@@ -32,7 +32,7 @@ public class GolemAIController : MonoBehaviour
 
         golemAttack = GolemAttack.None;
         currentSpeed = moveSpeed;
-        status = new Golem(1);
+        status = new Golem(Random.Range(Mathf.Max(1, GameData.data.lv - 3), Mathf.Min(20, GameData.data.lv + 3)));
         LhandCollider.enabled = false;
         RhandCollider.enabled = false;
     }
@@ -209,5 +209,11 @@ public class GolemAIController : MonoBehaviour
     {
         get { return action; }
         set { action = value; }
+    }
+
+    public Golem Status
+    {
+        get { return status; }
+        set { status = value; }
     }
 }

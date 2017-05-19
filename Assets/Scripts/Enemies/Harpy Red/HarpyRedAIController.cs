@@ -29,7 +29,7 @@ public class HarpyRedAIController : MonoBehaviour
 		control = gameObject.GetComponent<CharacterController>();
 		player = GameObject.FindWithTag("Player");
 		currentSpeed = moveSpeed;
-        status = new HarpyRed(1);
+        status = new HarpyRed(Random.Range(Mathf.Max(1, GameData.data.lv - 3), Mathf.Min(20, GameData.data.lv + 3)));
         // For check Ngua status each Lv.
         //Debug.Log(status.LV + " " + status.ATK + " " + status.DEF + " " + status.CurHP + "/" +status.HP);
 
@@ -156,5 +156,11 @@ public class HarpyRedAIController : MonoBehaviour
     {
         get { return action; }
         set { action = value; }
+    }
+
+    public HarpyRed Status
+    {
+        get { return status; }
+        set { status = value; }
     }
 }

@@ -30,7 +30,7 @@ public class NguaAIController : MonoBehaviour
         control = gameObject.GetComponent<CharacterController>();
 
         player = GameObject.FindWithTag("Player");
-        status = new Ngua(1);
+        status = new Ngua(Random.Range(Mathf.Max(1, GameData.data.lv - 3), Mathf.Min(20, GameData.data.lv + 3)));
         // For check Ngua status each Lv.
         //Debug.Log(status.LV + " " + status.ATK + " " + status.DEF + " " + status.CurHP + "/" +status.HP);
 
@@ -210,5 +210,11 @@ public class NguaAIController : MonoBehaviour
     {
         get { return action; }
         set { action = value; }
+    }
+
+    public Ngua Status
+    {
+        get { return status; }
+        set { status = value; }
     }
 }

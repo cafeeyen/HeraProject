@@ -15,6 +15,7 @@ public class HeraControl : MonoBehaviour
     private int jumpStep = 2, kicktime = 0, maxKickTime = 40, slapTime = 0, maxSlapTime = 20;
     private int comboMove = 0, comboTime = 0, maxcomboTime = 25;
     private bool isGround, takeNextCombo = false;
+    private string action = "";
 
     private enum HeraAction { Standing, Walking, Comboing, Kicking, Slaping, Die }
     private HeraAction heraAction, oldAction;
@@ -33,7 +34,9 @@ public class HeraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(heraAction != HeraAction.Die)
+        action = heraAction.ToString();
+
+        if (heraAction != HeraAction.Die)
         {
             // Face direction
             if (Input.GetKey("up") && Input.GetKey("left")) getRotation(new Vector3(-1f, 0f, 1f));
@@ -60,7 +63,7 @@ public class HeraControl : MonoBehaviour
         
 
         //=== Check key ===
-        if(Input.GetKeyDown(KeyCode.Keypad0) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking) 
+        if(Input.GetKeyDown(KeyCode.Z) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking) 
             && isGround && Time.time > moveCooldownCounter)
         {
             oldAction = heraAction;
@@ -68,13 +71,13 @@ public class HeraControl : MonoBehaviour
             comboTime = 0;
             comboMove = 1;
         }
-        else if(Input.GetKeyDown(KeyCode.Keypad2) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking) && Time.time > moveCooldownCounter)
+        else if(Input.GetKeyDown(KeyCode.X) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking) && Time.time > moveCooldownCounter)
         {
             oldAction = heraAction;
             heraAction = HeraAction.Slaping;
             slapTime = 0;
         }
-        else if(Input.GetKeyDown(KeyCode.Keypad1) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking) && Time.time > moveCooldownCounter)
+        else if(Input.GetKeyDown(KeyCode.C) && (heraAction == HeraAction.Standing || heraAction == HeraAction.Walking) && Time.time > moveCooldownCounter)
         {
             oldAction = heraAction;
             heraAction = HeraAction.Kicking;
@@ -301,6 +304,16 @@ public class HeraControl : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public string Action
+    {
+        get { return action; }
+    }
+
+    public int ComboMove
+    {
+        get { return comboMove; }
     }
     // public void dieHera()
     // {

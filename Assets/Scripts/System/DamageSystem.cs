@@ -3,7 +3,106 @@
 public class DamageSystem
 {
     private static GameData player = GameData.data;
-    private HeraControl hera;
+
+    public static void DamagetoEnemy(string action, int combo, GameObject enemy)
+    {
+        // Calculate atk in player side
+        int atk = player.baseAtk;
+        if (!(player.inventory.hat is BlankItem))
+        {
+            Equipment hat = (Equipment)player.inventory.hat;
+            atk += hat.atk;
+        }
+        if (!(player.inventory.glove is BlankItem))
+        {
+            Equipment glove = (Equipment)player.inventory.glove;
+            atk += glove.atk;
+        }
+        if (!(player.inventory.suit is BlankItem))
+        {
+            Equipment suit = (Equipment)player.inventory.suit;
+            atk += suit.atk;
+        }
+
+        // Multiply Dmg for each Action
+        switch (action)
+        {
+            case "Kicking": atk = (int)(atk * 1.8); break;
+            case "Slaping": atk = (int)(atk * 1.0); break;
+            case "Comboing": atk = (int)(atk * 0.6 * combo); break;
+        }
+
+        // Find which emeny is target and give it Dmg
+        if (enemy.GetComponent<CanipalntAIController>() != null)
+        {
+            Cani status = enemy.GetComponent<CanipalntAIController>().Status;
+        }
+
+        else if (enemy.GetComponent<CyclopAIControl>() != null)
+        {
+            Cyclop status = enemy.GetComponent<CyclopAIControl>().Status;
+            status.CurHP = Mathf.Max(atk - status.DEF);
+            if(status.CurHP <= 0)
+            {
+                player.gainExp(status.LV * 10);
+                dropItem();
+            }
+        }
+
+        else if (enemy.GetComponent<GolemAIController>() != null)
+        {
+            Golem status = enemy.GetComponent<GolemAIController>().Status;
+            status.CurHP = Mathf.Max(atk - status.DEF);
+            if (status.CurHP <= 0)
+            {
+                player.gainExp(status.LV * 10);
+                dropItem();
+            }
+        }
+
+        else if (enemy.GetComponent<HarpyAIController>() != null)
+        {
+            Harpy status = enemy.GetComponent<HarpyAIController>().Status;
+            status.CurHP = Mathf.Max(atk - status.DEF);
+            if (status.CurHP <= 0)
+            {
+                player.gainExp(status.LV * 10);
+                dropItem();
+            }
+        }
+
+        else if (enemy.GetComponent<HarpyRedAIController>() != null)
+        {
+            HarpyRed status = enemy.GetComponent<HarpyRedAIController>().Status;
+            status.CurHP = Mathf.Max(atk - status.DEF);
+            if (status.CurHP <= 0)
+            {
+                player.gainExp(status.LV * 10);
+                dropItem();
+            }
+        }
+
+        else if (enemy.GetComponent<NguaAIController>() != null)
+        {
+            Ngua status = enemy.GetComponent<NguaAIController>().Status;
+            status.CurHP = Mathf.Max(atk - status.DEF);
+            if (status.CurHP <= 0)
+            {
+                player.gainExp(status.LV * 10);
+                dropItem();
+            }
+        }
+
+        else if (enemy.GetComponent<MiaNoiAIController>() != null)
+        {
+            MiaNoi status = enemy.GetComponent<MiaNoiAIController>().Status;
+            status.CurHP = Mathf.Max(atk - status.DEF);
+            if (status.CurHP <= 0)
+            {
+                player.gainExp(status.LV * 50);
+            }
+        }
+    }
 
     public static void DamageToPlayer(int atk, string action)
     {
@@ -75,7 +174,13 @@ public class DamageSystem
 
     public static void dropItem()
     {
-        // Random item type
+        // Lucky or Not!?
+        int drop = Random.Range(0, 3);
+        if(drop == 2)
+        {
+            // Random item type
+        }
+
         // If not potion -> Item base on level -> Random rare -> Random stat
         // Else Use potion
         //  -> If HP/MP Potion --> Increse Player HP/MP

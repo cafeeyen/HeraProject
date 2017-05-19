@@ -33,7 +33,7 @@ public class MiaNoiAIController : MonoBehaviour {
 	void Start () {
 		animator = gameObject.GetComponentInChildren<Animator>();
         control = gameObject.GetComponent<CharacterController>();
-		status = new MiaNoi(1);
+		status = new MiaNoi(Mathf.Min(20, GameData.data.lv + 3));
 
         player = GameObject.FindWithTag("Player");
 		currentSpeed = moveSpeed;
@@ -262,6 +262,12 @@ public class MiaNoiAIController : MonoBehaviour {
     {
         get { return action; }
         set { action = value; }
+    }
+
+    public MiaNoi Status
+    {
+        get { return status; }
+        set { status = value; }
     }
 }
 

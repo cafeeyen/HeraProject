@@ -1,16 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class HeraCollisionDetector : MonoBehaviour {
+public class HeraCollisionDetector : MonoBehaviour
+{
+    private HeraControl controller;
 
-	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        controller = transform.root.GetComponent<HeraControl>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (controller.Action.Equals("Comboing") || controller.Action.Equals("Kicking") || controller.Action.Equals("Slaping"))
+        {
+            if(other.tag.Equals("Enemy") || other.tag.Equals("Boss"))
+            {
+                DamageSystem.DamagetoEnemy(controller.Action, controller.ComboMove, other.transform.root.gameObject);
+            }
+        }
+            
+    }
 }

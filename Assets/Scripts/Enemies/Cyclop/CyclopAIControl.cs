@@ -32,7 +32,7 @@ public class CyclopAIControl : MonoBehaviour
         cyclopAction = CyclopAction.None;
         cyclopMoving = CyclopMoving.Standing;
         animator.SetInteger("attacking", 0);
-        status = new Cyclop(1);
+        status = new Cyclop(Random.Range(Mathf.Max(1, GameData.data.lv - 3), Mathf.Min(20, GameData.data.lv + 3)));
         headCollider.enabled = false;
         clubCollider.enabled = false;
     }
@@ -180,5 +180,11 @@ public class CyclopAIControl : MonoBehaviour
     {
         get { return action; }
         set { action = value; }
+    }
+
+    public Cyclop Status
+    {
+        get { return status; }
+        set { status = value; }
     }
 }
