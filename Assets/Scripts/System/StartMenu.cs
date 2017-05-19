@@ -63,7 +63,7 @@ public class StartMenu : MonoBehaviour
             //LoadingScreenManager.LoadScene(10, new Vector3(-340, 60, -400));
 
             // Real map
-            LoadingScreenManager.LoadScene(1, new Vector3(560, 3, 170));
+            LoadingScreenManager.LoadScene(1, new Vector3(806, 3, 82));
 
         else if (currentMenu == Menu.Continue)
             LoadingScreenManager.LoadScene(SaveLoad.savedGames.map, new Vector3(SaveLoad.savedGames.posx, SaveLoad.savedGames.posy, SaveLoad.savedGames.posz) );
