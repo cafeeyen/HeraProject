@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BC6CFBBB-CE1A-03E4-571B-F739B71AF7D0}</ProjectGuid>
+    <ProjectGuid>{68CF5558-920A-E9AF-45D6-378C23E7A132}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ActivateTextAtLine.cs" />
+     <Compile Include="Assets\Scripts\Cameras\BossCamera.cs" />
      <Compile Include="Assets\Scripts\Cameras\MainCameraScript.cs" />
      <Compile Include="Assets\Scripts\Cameras\Map02_Camera.cs" />
      <Compile Include="Assets\Scripts\Cameras\Map03_Camera.cs" />
@@ -97,6 +98,7 @@
      <Compile Include="Assets\Scripts\System\DamageSystem.cs" />
      <Compile Include="Assets\Scripts\System\DieRespawnUI.cs" />
      <Compile Include="Assets\Scripts\System\DontDestroyOnLoad.cs" />
+     <Compile Include="Assets\Scripts\System\EnterBossChecker.cs" />
      <Compile Include="Assets\Scripts\System\GameController.cs" />
      <Compile Include="Assets\Scripts\System\GameData.cs" />
      <Compile Include="Assets\Scripts\System\LoadScene.cs" />
@@ -137,6 +139,7 @@
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\2D GUI\dialog_boss.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
@@ -218,7 +221,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{059B02B3-B496-CB20-56CB-305D6BBCEA8C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{4DF1201C-211E-27D5-C20B-81F8FA99CA23}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

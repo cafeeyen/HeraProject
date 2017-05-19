@@ -14,7 +14,7 @@ public class MiaNoiAIController : MonoBehaviour {
     private float distance, currentSpeed;
 	private float atk1Time, atk2Time, atk3Time, currentDashTime;
 	private float atk1CooldownCounter, atk2CooldownCounter, atk3CooldownCounter, dashCooldownCounter;
-    private bool inRange, isColliding = false;
+    private bool inRange, isColliding = false, enableBoss = false;
 
 	private string action = "";
 
@@ -37,7 +37,7 @@ public class MiaNoiAIController : MonoBehaviour {
 
         player = GameObject.FindWithTag("Player");
 		currentSpeed = moveSpeed;
-		miaNoiMoving = MiaNoiMoving.Following;
+		miaNoiMoving = MiaNoiMoving.Neutral;
 		leftHandCollider.enabled = false;
 		panCollider.enabled = false;
 
@@ -47,21 +47,21 @@ public class MiaNoiAIController : MonoBehaviour {
 	void Update () {
 		distance = Vector3.Distance(transform.position, player.transform.position);
 
-		//Debug.Log(" " + miaNoiMoving + " " + miaNoiAction + "  at " + distance);
-
-		if (distance < 12 && miaNoiMoving == MiaNoiMoving.Following)
+		if(enableBoss)
         {
-            miaNoiMoving = MiaNoiMoving.Neutral;
-            currentDashTime = 0;
-            animator.SetInteger("Walking", 0);
-            moveVector = Vector3.zero;
-            currentSpeed = moveSpeed;
+            if (distance < 12 && miaNoiMoving == MiaNoiMoving.Following)
+            {
+                miaNoiMoving = MiaNoiMoving.Neutral;
+                currentDashTime = 0;
+                animator.SetInteger("Walking", 0);
+                moveVector = Vector3.zero;
+                currentSpeed = moveSpeed;
+            }
+            else if(distance > 15 && miaNoiMoving == MiaNoiMoving.Neutral)
+            {
+                miaNoiMoving = MiaNoiMoving.Following;
+            }
         }
-		else if(distance > 15 && miaNoiMoving == MiaNoiMoving.Neutral)
-		{
-			miaNoiMoving = MiaNoiMoving.Following;
-		}
-
 
 		//process move
 		if(miaNoiMoving == MiaNoiMoving.Attacking)
@@ -243,12 +243,12 @@ public class MiaNoiAIController : MonoBehaviour {
         {
             status.Alive = false;
             Destroy(gameObject);
-			Debug.Log("===Win===");
         }
     }
 
-	public void enableMoving()
+	public void enableBossMoving()
 	{
+        enableBoss = true;
 		miaNoiMoving = MiaNoiMoving.Following;
 	}
 

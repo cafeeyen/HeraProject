@@ -7,6 +7,7 @@ public class ActivateTextAtLine : MonoBehaviour {
 	public TextAsset theText;
 	public TextBoxManager textBoxManager;
 	public int startLine, endLine;
+	public bool destroyOnEnd = false;
 
 
 	// Use this for initialization
@@ -27,6 +28,14 @@ public class ActivateTextAtLine : MonoBehaviour {
 			textBoxManager.currentLine = startLine;
 			textBoxManager.endAtLine = endLine;
 			textBoxManager.enableTextBox();
+		}
+    }
+
+	private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.CompareTag("Player") && destroyOnEnd)
+		{
+			Destroy(gameObject);
 		}
     }
 }

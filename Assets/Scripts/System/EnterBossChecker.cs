@@ -7,17 +7,24 @@ public class EnterBossChecker : MonoBehaviour
 
     private GameObject player;
     private GameObject boss;
+    private MiaNoiAIController mianoi;
 
 	void Start ()
     {
         player = GameObject.FindWithTag("Player");
         boss = GameObject.FindWithTag("Boss");
+        mianoi = GameObject.FindWithTag("Boss").GetComponent<MiaNoiAIController>();
         setWallCollider(false);
     }
 
 	void Update ()
     {
-		if(!boss.activeSelf)
+        if(boss == null)
+        {
+            setWallCollider(false);
+            Destroy(gameObject);
+        }
+		else if(!boss.activeSelf)
         {
             setWallCollider(false);
             Destroy(gameObject);
@@ -29,6 +36,14 @@ public class EnterBossChecker : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             setWallCollider(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            mianoi.enableBossMoving();
         }
     }
 

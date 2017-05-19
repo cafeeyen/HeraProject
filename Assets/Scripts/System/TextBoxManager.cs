@@ -62,9 +62,7 @@ public class TextBoxManager : MonoBehaviour {
 	{
 		isTextboxActive = true;
 		textBox.SetActive(true);
-		player.enabled = false;
-		Debug.Log("enableTextBox" + textBox.activeSelf);
-		
+		player.enabled = false;		
 	}
 
 	public void disableTextBox()
