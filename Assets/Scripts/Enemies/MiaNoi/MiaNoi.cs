@@ -8,9 +8,9 @@ public class MiaNoi
     public MiaNoi(int lv)
     {
         this.lv = lv;
-        atk = 1000 - (int)(Math.Log(21 - lv, 2.8) * 1000 / 3);
+        atk = 500 - (int)(Math.Log(21 - lv, 2.8) * 500 / 3);
         def = 320 - (int)(Math.Log(21 - lv, 2.8) * 320 / 3);
-        hp = 500 - (int)(Math.Log(21 - lv, 2.8) * 500 / 3);
+        hp = 1000 - (int)(Math.Log(21 - lv, 2.8) * 1000 / 3);
         curHp = hp;
         alive = true;
     }

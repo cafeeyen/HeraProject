@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-public class MiaNoiCollisionDetector : MonoBehaviour {
-
+public class MiaNoiCollisionDetector : MonoBehaviour
+{
 	private MiaNoiAIController controller;
 
     private void OnTriggerEnter(Collider other)

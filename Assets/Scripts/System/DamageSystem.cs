@@ -31,6 +31,10 @@ public class DamageSystem
 
             // Golem
             case ("Golem_Hand"): atk = (int)(atk * 1.0); break;
+
+            // Boss
+            case ("MiaNoi_Hand"): atk = (int)(atk * 1.0); break;
+            case ("MiaNoi_Pan"): atk = (int)(atk * 1.2); break;
         }
 
         // Calculate def in player side
@@ -55,7 +59,8 @@ public class DamageSystem
         player.curHp -= Mathf.Max(0, atk - def);
 
         // If Player HP <= 0 ---> Dead
-        if (player.curHp <= 0){
+        if (player.curHp <= 0)
+        {
             //Time.timeScale = 0;
             //heraDie();
         }
